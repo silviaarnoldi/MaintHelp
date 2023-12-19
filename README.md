@@ -97,11 +97,19 @@ eliminare utente
 ![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/ed9395a2-ac7b-48dd-b944-54062c7be500)
 
 
+**OPERATO:**
+HOME:
+
+![Alt text](image-1.png)
 
 scrivere il DocRichiesta
 
 ![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/f1b16638-ed83-4418-8575-b8a8b786ca41)
 
+
+**MANUTENTORE:**
+
+HOME:
 
 ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
 
