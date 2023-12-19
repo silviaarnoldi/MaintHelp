@@ -42,7 +42,7 @@
             }
 
             // Aggiornamento dello stato del macchinario
-            $sql = "UPDATE macchinari SET stato='$stato_macchinario' WHERE id='$id_macchinario'";
+            $sql = "UPDATE MACCHINARIO SET stato='$stato_macchinario' WHERE id='$id_macchinario'";
 
             // Esecuzione query
             if ($conn->query($sql) === TRUE) {
