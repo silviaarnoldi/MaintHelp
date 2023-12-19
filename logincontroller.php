@@ -24,6 +24,7 @@ if($connesione->connect_error){
                 $nome=$user['USERNAME'];
                 $_SESSION['id']=$id;
                 $_SESSION['nome']=$nome;
+                $_SESSION['ruolo']=$user['RUOLO'];
             }
         }
         $result->close();

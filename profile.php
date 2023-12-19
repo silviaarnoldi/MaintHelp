@@ -6,11 +6,12 @@ if(!isset($_SESSION['id'])){
 }
 $id=$_SESSION['id'];
 $nome=$_SESSION['nome'];
+$ruolo=$_SESSION['ruolo'];
 ?>
 <!DOCTYPE html>
 <html lang="">
     <body>
-        <h1>Benvenuto <?php echo $nome; ?></h1>
+        <h1>Benvenuto <?php echo $ruolo; ?></h1>
         <a href="logout.php">Logout</a>
     </body>
 </html>
