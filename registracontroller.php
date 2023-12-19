@@ -13,11 +13,11 @@ if($connesione->connect_error){
     exit();
 }else{
     // Controllo se il nome utente esiste già
-    $checkUsername = "SELECT * FROM utenti WHERE username='$username'";
+    $checkUsername = "SELECT * FROM UTENTE WHERE username='$username'";
     $result = $connesione->query($checkUsername);
 
     if ($result->num_rows > 0) {
-        echo "Il nome utente esiste già. Si prega di scegliere un nome utente diverso.";
+        echo "alert('Username già esistente,cambialo');";
         header("Location: registra.php");
     } else {
         try{
