@@ -7,8 +7,8 @@ if(!isset($_SESSION['ruolo'])){
     if($_SESSION['ruolo']!="Manutentore"){
         header("Location: login.php");
     }else{
-        echo(" benenuto Manutentore");
-        //codice...
+        $nome=$_SESSION['nome'];
+        
     }
 }
 
@@ -16,7 +16,9 @@ if(!isset($_SESSION['ruolo'])){
 <!DOCTYPE html>
 <html lang="">
     <body>
-        
+        <center>
+            <h1>Manutentore: <?php echo $nome; ?></h1> <br> 
         <a href="logout.php">Logout</a>
+        </center>
     </body>
 </html>

@@ -7,8 +7,8 @@ if(!isset($_SESSION['ruolo'])){
     if($_SESSION['ruolo']!="Operatore"){
         header("Location: login.php");
     }else{
-        echo(" benenuto Operatore");
-        //codice...
+        $nome=$_SESSION['nome'];
+        
     }
 }
 
@@ -16,9 +16,12 @@ if(!isset($_SESSION['ruolo'])){
 <!DOCTYPE html>
 <html lang="">
     <body>
+    <center>
+        <h1>Operatore: <?php echo $nome;?></h1> <br> 
     <form action="richiesta.php" method="post">
-            <input type="submit" value="invia richiesta">
+            <input type="submit" value="invia richiesta"> <br> 
         </form>
         <a href="logout.php">Logout</a>
+    </center>
     </body>
 </html>

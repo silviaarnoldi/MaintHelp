@@ -4,7 +4,11 @@
     $tipo_guasto = $_POST['tipo_guasto'];
     $stato_macchinario = $_POST['stato_macchinario'];
     $username_operatore = $_POST['username_operatore'];
-
+    if($stato_macchinario == "ON") {
+        $stato_macchinario = 1;
+    } else {
+        $stato_macchinario = 0;
+    }
     // Connessione al database
     $conn = new mysqli('localhost','root','','MaintHelp'); 
 
@@ -37,6 +41,8 @@
             // Esecuzione query
             if ($conn->query($sql) === TRUE) {
                 echo "Richiesta inviata con successo";
+                echo "<br>";
+                echo "<a href='profile.php'>Torna alla home</a>";
             } else {
                 echo "Errore nell'invio della richiesta: " . $conn->error;
             }
@@ -46,7 +52,7 @@
 
             // Esecuzione query
             if ($conn->query($sql) === TRUE) {
-                echo "Stato del macchinario aggiornato con successo";
+               // echo "Stato del macchinario aggiornato con successo";
             } else {
                 echo "Errore nell'aggiornamento dello stato del macchinario: " . $conn->error;
             }
