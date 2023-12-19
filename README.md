@@ -19,7 +19,7 @@ manutentori,operatori e amministratori aziendali;
   * accedere alla piattaforma ** (FATTO)**
     
 **OPERATORE**:
-  * scrivere il DocRichiesta
+  * scrivere il DocRichiesta ** (FATTO)**
 
 **MANUTENTORE**:
   * scrivere DocManutenzionePreventiva
@@ -132,6 +132,11 @@ scrivere DocManutenzioneGuasto e ricevere i DocMachinari,storici di DocManutenzi
 
 
 # DATABASE
+**consiglio di scaricare l'estensione docker**
+
 **per accedere al database inserisci la seguente riga nel terminale**:docker run --name myXampp -p 41061:22 -p 41062:80 -d -v /workspaces/MaintHelp:/www tomsik68/xampp:8
 
-**PER CREARE IL DATABASE IN  SQL FAI COPIA IN COLLA DEL FILE "database.sql"**
+**PER CREARE IL DATABASE IN  SQL FAI COPIA IN COLLA DEL FILE "database.sql"** 
+
+** per il LOGIN e testare il REGISTRA ED ELIMINA utente, accedere con le credenziali username: **admin** , password: **esperia**
+
