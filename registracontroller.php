@@ -16,7 +16,7 @@ if($connesione->connect_error){
     try{
         $registra="insert into UTENTE (nome, cognome, ruolo, username, password) values ('$nome', '$cognome', '$ruolo', '$username', '$password')";
         $connesione->query($registra);
-        header("Location: login.php");
+        hheader("Location: homeAmministratore.php");
     }catch(Exception $e){
         $err = $e->getMessage();
         header("Location: registra.php?err=$err");
