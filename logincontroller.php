@@ -12,10 +12,12 @@ if($connesione->connect_error){
     exit();
 }else{
     try{
-        $verifica="select * from UTENTE where USERNAME='$username' and PASSWORD='$password'";
+        $verifica="select * from UTENTE where USERNAME='$username' and PASSWORD='$password';";
         $result=$connesione->query($verifica);
+        echo("risultat".$result->num_rows>0);
         if($result->num_rows>0){
             while($user=$result->fetch_array(MYSQLI_ASSOC)){
+                echo("id:".$user['id']);
                 $id=$user['id'];
                 $nome=$user['nome'];
                 $_SESSION['id']=$id;
@@ -23,7 +25,8 @@ if($connesione->connect_error){
             }
         }
         $result->close();
-        header("Location: profile.php");
+        //header("Location: profile.php");
+        echo(" id: ".$_SESSION['id']."".$id);
         
     }catch(Exception $e){
         $err = $e->getMessage();
