@@ -84,7 +84,8 @@ accedere alla piattaforma
 
 HOME:
 
-![Alt text](image.png)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/6b5126f6-fd87-4f70-91a0-8489d5767ea7)
+
 
 
 registare un utente 
@@ -100,7 +101,8 @@ eliminare utente
 **OPERATO:**
 HOME:
 
-![Alt text](image-1.png)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/18f512df-4ebb-4a29-8aa4-a14b0481356d)
+
 
 scrivere il DocRichiesta
 
