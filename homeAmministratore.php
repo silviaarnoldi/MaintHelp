@@ -7,7 +7,7 @@ if(!isset($_SESSION['ruolo'])){
     if($_SESSION['ruolo']!="Amministratore"){
         header("Location: login.php");
     }else{
-        //echo(" benenuto Amministratore");
+        echo(" benenuto Amministratore");
         $ruolo=$_SESSION['ruolo'];
 
     }
@@ -17,7 +17,12 @@ if(!isset($_SESSION['ruolo'])){
 <!DOCTYPE html>
 <html lang="">
     <body>
-        
+        //BOTTONE CHE MI PORTA ALLA PAGINA DI REGISTRAZIONE
+        <form action="registra.php" method="post">
+            <input type="submit" value="Registra Utente">
+        <form action="elimina.php" method="post">
+            <input type="submit" value="Elimina Utente">
+        </form>
         <a href="logout.php">Logout</a>
     </body>
 </html>

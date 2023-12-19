@@ -4,10 +4,10 @@ session_start();
 if(!isset($_SESSION['ruolo'])){
     header("Location: login.php");
 }else{
-    if($_SESSION['ruolo']!="Operatore"){
+    if($_SESSION['ruolo']!="Manutentore"){
         header("Location: login.php");
     }else{
-        echo(" benenuto Operatore");
+        echo(" benenuto Manutentore");
         //codice...
     }
 }
