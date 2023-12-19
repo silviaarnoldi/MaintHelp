@@ -80,6 +80,11 @@ accedere alla piattaforma
 
 ![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/f9f69fb7-add1-48a7-8998-fde7f9053a2b)
 
+**AMMINISTRATORE:**
+
+HOME:
+
+![Alt text](image.png)
 
 
 registare un utente 

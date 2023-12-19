@@ -7,9 +7,17 @@ if(!isset($_SESSION['ruolo'])){
     if($_SESSION['ruolo']!="Amministratore"){
         header("Location: login.php");
     }else{
-        echo(" benenuto Amministratore");
-        
+        //echo(" benenuto Amministratore");
+        $ruolo=$_SESSION['ruolo'];
+
     }
 }
-
+/*<h1>Benvenuto <?php echo $ruolo; ?></h1>*/
 ?>
+<!DOCTYPE html>
+<html lang="">
+    <body>
+        
+        <a href="logout.php">Logout</a>
+    </body>
+</html>
