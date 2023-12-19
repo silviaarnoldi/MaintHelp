@@ -18,9 +18,10 @@ if($connesione->connect_error){
         if($result->num_rows>0){
             echo("risultat".$result->num_rows);
             while($user=$result->fetch_array(MYSQLI_ASSOC)){
-                echo("id:".$user['id']);
-                $id=$user['id'];
-                $nome=$user['nome'];
+               // $user=$result->fetch_row();
+                echo("id:".$user['ID']);
+                $id=$user['ID'];
+                $nome=$user['USERNAME'];
                 $_SESSION['id']=$id;
                 $_SESSION['nome']=$nome;
             }
