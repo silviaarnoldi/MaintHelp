@@ -13,10 +13,3 @@ if(!isset($_SESSION['ruolo'])){
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="">
-    <body>
-        <!-- aggiungi collegamento a registrazione.php -->
-        <a href="registra.php">registra nuovo utente</a>
-    </body>
-</html>
