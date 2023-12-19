@@ -8,8 +8,15 @@ if(!isset($_SESSION['ruolo'])){
         header("Location: login.php");
     }else{
         echo(" benenuto Amministratore");
-        //codice...
+        
     }
 }
 
 ?>
+<!DOCTYPE html>
+<html lang="">
+    <body>
+        <!-- aggiungi collegamento a registrazione.php -->
+        <a href="registra.php">registra nuovo utente</a>
+    </body>
+</html>
