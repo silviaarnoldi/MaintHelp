@@ -34,7 +34,7 @@ manutentori,operatori e amministratori aziendali;
     
 # DIAGRAMMA E.R.:
 
-![290471021-136248e5-5ea0-4036-a4f2-2d5e365eff81](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/3fee65a6-1c8b-4d07-bddf-f15d0ef3c184)
+![290471021-136248e5-5ea0-4036-a4f2-2d5e365eff81](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/3fee65a6-1c8b-4d07-bddf-f15d0ef3c184) 
 
 
 
