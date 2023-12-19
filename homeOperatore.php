@@ -16,7 +16,9 @@ if(!isset($_SESSION['ruolo'])){
 <!DOCTYPE html>
 <html lang="">
     <body>
-        
+    <form action="richiesta.php" method="post">
+            <input type="submit" value="invia richiesta">
+        </form>
         <a href="logout.php">Logout</a>
     </body>
 </html>
