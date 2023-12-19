@@ -78,36 +78,43 @@ manutentori,operatori e amministratori aziendali;
 # MOCKUP: 
 accedere alla piattaforma
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/90ddc362-85aa-4379-891c-fce337e75979)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/f9f69fb7-add1-48a7-8998-fde7f9053a2b)
+
 
 
 registare un utente 
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/3ef6a592-1442-4bcc-aec0-a07063aa18e1)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/3a1452a6-c892-480b-93b5-f47c75894e7f)
 
 
 eliminare utente
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/e94b8a15-2c47-4e6f-8b7d-cd13086b4f03)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/ed9395a2-ac7b-48dd-b944-54062c7be500)
+
 
 
 scrivere il DocRichiesta
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/cc6ace75-0850-43a9-aaf2-afb5a09e038b)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/f1b16638-ed83-4418-8575-b8a8b786ca41)
 
 
 ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/a5f9aa59-b305-40ec-a592-5d8e54c56514)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/f6b7dbd2-bc7a-4773-b5e9-e94ae34bb473)
+
 
 
 scrivere DocManutenzionePreventiva e ricevere i DocMachinari
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/bb17b347-7d7c-44f3-9aa2-16171b1c1ddb)
+
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/8569cb80-39ea-4644-b7e2-f8c3b3bc1535)
+
 
 
 
 scrivere DocManutenzioneGuasto e ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva
-![279045353-cb90a159-a742-413d-a94d-808d64b4a8b8](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/ea80e3e5-16e4-490d-b975-0a40a7f1d702)
+
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/20b608b8-7abd-413b-9f1f-d52c3ca81709)
+
 
 
 
