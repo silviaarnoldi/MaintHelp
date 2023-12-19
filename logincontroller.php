@@ -14,7 +14,7 @@ if($connesione->connect_error){
     try{
         $verifica="select * from UTENTE where USERNAME='$username' and PASSWORD='$password';";
         $result=$connesione->query($verifica);
-        echo("risultat".$result->num_rows);
+       // echo("risultat".$result->num_rows);
         if($result->num_rows>0){
             echo("risultat".$result->num_rows);
             while($user=$result->fetch_array(MYSQLI_ASSOC)){
