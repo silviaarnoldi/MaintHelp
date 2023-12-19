@@ -18,10 +18,10 @@ if(!isset($_SESSION['ruolo'])){
         <center>
             <h1>Amministratore: <?php echo $nome; ?></h1> <br> 
         <form action="registra.php" method="post">
-            <input type="submit" value="Registra Utente"> <br> 
+            <input type="submit" value="Registra Utente"> <br> <br>
         </form>
         <form action="elimina.php" method="post"> 
-            <input type="submit" value="Elimina Utente"> <br> 
+            <input type="submit" value="Elimina Utente"> <br> <br>
         </form>
         <a href="logout.php">Logout</a>
         </center>

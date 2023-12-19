@@ -10,7 +10,7 @@
             <option value="Amministratore">Amministratore</option> 
             <option value="Operatore">Operatore</option>
             <option value="Manutentore">Manutentore</option>
-        </select>
+        </select> <br> <br>
         <input type="text" name="username" placeholder="username"> <br> <br>
         <input type="text" name="password" placeholder="password">  <br> <br>
         <input type="submit" value="Registrati">

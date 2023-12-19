@@ -17,7 +17,7 @@ if(!isset($_SESSION['ruolo'])){
 <html lang="">
     <body>
         <center>
-            <h1>Manutentore: <?php echo $nome; ?></h1> <br> 
+            <h1>Manutentore: <?php echo $nome; ?></h1> <br> <br>
         <a href="logout.php">Logout</a>
         </center>
     </body>

@@ -19,7 +19,7 @@ if(!isset($_SESSION['ruolo'])){
     <center>
         <h1>Operatore: <?php echo $nome;?></h1> <br> 
     <form action="richiesta.php" method="post">
-            <input type="submit" value="invia richiesta"> <br> 
+            <input type="submit" value="invia richiesta"> <br>  <br>
         </form>
         <a href="logout.php">Logout</a>
     </center>
