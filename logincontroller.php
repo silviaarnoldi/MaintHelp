@@ -16,10 +16,10 @@ if($connesione->connect_error){
         $result=$connesione->query($verifica);
        // echo("risultat".$result->num_rows);
         if($result->num_rows>0){
-            echo("risultat".$result->num_rows);
+           // echo("risultat".$result->num_rows);
             while($user=$result->fetch_array(MYSQLI_ASSOC)){
                // $user=$result->fetch_row();
-                echo("id:".$user['ID']);
+               // echo("id:".$user['ID']);
                 $id=$user['ID'];
                 $nome=$user['USERNAME'];
                 $_SESSION['id']=$id;
@@ -27,8 +27,8 @@ if($connesione->connect_error){
             }
         }
         $result->close();
-        //header("Location: profile.php");
-        echo(" id: ".$_SESSION['id']."".$id);
+        header("Location: profile.php");
+        //echo(" id: ".$_SESSION['id']."".$id);
         
     }catch(Exception $e){
         $err = $e->getMessage();
