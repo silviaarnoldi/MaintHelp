@@ -7,9 +7,18 @@ if(!isset($_SESSION['id'])){
 $id=$_SESSION['id'];
 $nome=$_SESSION['nome'];
 $ruolo=$_SESSION['ruolo'];
-if($ruolo == "A")
-
-?>
+if($ruolo == "Amministratore"){
+    header("Location: homeAmministratore.php");
+}else{
+    if($ruolo == "Operatore"){
+        header("Location: homeOperatore.php");
+    }else{
+        if($ruolo == "Manutentore"){
+            header("Location: homeManutentore.php");
+        }
+    }
+}
+/*
 <!DOCTYPE html>
 <html lang="">
     <body>
@@ -17,3 +26,5 @@ if($ruolo == "A")
         <a href="logout.php">Logout</a>
     </body>
 </html>
+*/
+?>
