@@ -7,6 +7,10 @@
         <input type="text" name="ruolo" placeholder="Ruolo">
         <input type="submit" value="Elimina">
     </form>
-    
+    <?php
+if(isset($_GET['error'])){
+    echo $_GET['error'];
+}
+?>
 </body>
 </html>

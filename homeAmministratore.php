@@ -17,9 +17,9 @@ if(!isset($_SESSION['ruolo'])){
 <!DOCTYPE html>
 <html lang="">
     <body>
-        //BOTTONE CHE MI PORTA ALLA PAGINA DI REGISTRAZIONE
         <form action="registra.php" method="post">
             <input type="submit" value="Registra Utente">
+        </form>
         <form action="elimina.php" method="post">
             <input type="submit" value="Elimina Utente">
         </form>
