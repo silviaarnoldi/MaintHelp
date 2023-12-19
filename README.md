@@ -84,7 +84,8 @@ accedere alla piattaforma
 
 HOME:
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/6b5126f6-fd87-4f70-91a0-8489d5767ea7)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/a7879202-97b1-4103-982e-057ece568cd6)
+
 
 
 
@@ -101,7 +102,8 @@ eliminare utente
 **OPERATO:**
 HOME:
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/18f512df-4ebb-4a29-8aa4-a14b0481356d)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/98c7406f-5adc-4b99-aa35-68213bee1682)
+
 
 
 scrivere il DocRichiesta
