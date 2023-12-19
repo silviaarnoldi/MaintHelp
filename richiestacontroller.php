@@ -14,7 +14,7 @@
     }
 
     // Ottieni l'ID dell'operatore dal suo username
-    $sql = "SELECT id FROM operatori WHERE username='$username_operatore'";
+    $sql = "SELECT id FROM UTENTE WHERE username='$username_operatore' AND ruolo='Operatore'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -23,13 +23,13 @@
         $operatore_id = $row['id'];
 
         // Ottieni l'ID del guasto dal suo tipo
-        $sql = "SELECT id FROM guasti WHERE tipo='$tipo_guasto'";
+        $sql = "SELECT ID FROM GUASTO WHERE TIPOGUASTO='$tipo_guasto'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             // Il guasto esiste, ottieni il suo ID
             $row = $result->fetch_assoc();
-            $guasto_id = $row['id'];
+            $guasto_id = $row['ID'];
 
             // Query di inserimento
             $sql = "INSERT INTO DOCUMENTO (NOME, TIPODOCUMENTO, TIPOGUASTO, DATA_INVIA, OPERATORE_ID, MACCHINARIO_ID, GUASTO_ID) VALUES ('Documento', 'Richiesta', '$tipo_guasto', '$data', '$operatore_id', '$id_macchinario', '$guasto_id')";
