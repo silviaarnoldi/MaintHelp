@@ -16,7 +16,7 @@ manutentori,operatori e amministratori aziendali;
 
 # FUNZIONALITA': 
 **UTENTI**:
-  * accedere alla piattaforma
+  * accedere alla piattaforma ** (FATTO)**
     
 **OPERATORE**:
   * scrivere il DocRichiesta
@@ -29,8 +29,8 @@ manutentori,operatori e amministratori aziendali;
   * ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva
     
 **AMMINISTRATORE**:
-  * registare un utente
-  * eliminare utente
+  * registare un utente ** (FATTO)**
+  * eliminare utente ** (FATTO)**
     
 # DIAGRAMMA E.R.:
 
