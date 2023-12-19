@@ -7,6 +7,8 @@ if(!isset($_SESSION['id'])){
 $id=$_SESSION['id'];
 $nome=$_SESSION['nome'];
 $ruolo=$_SESSION['ruolo'];
+if($ruolo == "A")
+
 ?>
 <!DOCTYPE html>
 <html lang="">

@@ -5,13 +5,6 @@ $ruolo=$_POST['ruolo'];
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-$ruoli_validi = array("Amministratore", "Operatore", "Manutentore","amministratore", "operatore", "manutentore");
-
-if (!in_array($ruolo, $ruoli_validi)) {
-    echo "Il ruolo inserito non è valido";
-    exit();
-}
-
 $password=MD5($password);
 echo("ok");
 
