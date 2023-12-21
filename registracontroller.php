@@ -23,7 +23,7 @@ if($connesione->connect_error){
         try{
             $registra="insert into UTENTE (nome, cognome, ruolo, username, password) values ('$nome', '$cognome', '$ruolo', '$username', '$password')";
             $connesione->query($registra);
-            echo "Richiesta inviata con successo";
+            echo "Registrazione effetuata";
             echo "<br>";
             echo "<a href='profile.php'>Torna alla home</a>";
         }catch(Exception $e){

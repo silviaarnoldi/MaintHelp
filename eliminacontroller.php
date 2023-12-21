@@ -14,8 +14,9 @@
 
     // Esecuzione query
     if ($conn->query($sql) === TRUE) {
-        echo "Utente eliminato con successo";
-        header("Location: homeAmministratore.php");
+        echo "eliminazione effetuata";
+        echo "<br>";
+        echo "<a href='profile.php'>Torna alla home</a>";
     } else {
         echo "Errore nell'eliminazione dell'utente: " . $conn->error;
     }
