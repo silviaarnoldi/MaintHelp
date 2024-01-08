@@ -33,7 +33,9 @@ manutentori,operatori e amministratori aziendali;
   * eliminare utente ** (FATTO)**
     
 # DIAGRAMMA E.R.:
-![289540651-284bf6fe-926b-4db6-bc2b-477dcd7a9828](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/58e8dee5-2e52-4ffb-90ca-e94624748b1b)
+
+![278418006-91bfdd0e-256f-4af3-8954-c7885f5d6471](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/d467e4a3-cc66-4854-81c1-8f9d98d0470c)
+
 
 
 
