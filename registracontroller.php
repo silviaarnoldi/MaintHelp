@@ -1,7 +1,8 @@
 <?php
+session_start();
 $nome=$_POST['nome'];
 $cognome=$_POST['cognome'];
-$ruolo = strtoupper($_SESSION['ruolo']);
+$ruolo = strtoupper($_POST['ruolo']);
 $username=$_POST['username'];
 $password=$_POST['password'];
 

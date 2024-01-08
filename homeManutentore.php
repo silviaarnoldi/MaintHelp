@@ -18,8 +18,6 @@ if(!isset($_SESSION['ruolo'])){
     <body>
         <center>
             <h1>Manutentore: <?php echo $nome; ?></h1> <br> <br>
-
-            //TABELLA CHE ELENCA GLI ID DEI MACCHINARI E LE RISPETTIVE DATE DI MANUTENZIONE E CHIAMATE DI MANUTENZIONE
             <table border="1">
                 <tr>
                     <th>Id Macchinario</th>
@@ -33,16 +31,20 @@ if(!isset($_SESSION['ruolo'])){
                     echo("Connection failed: " . $connesione->connect_error);
                     exit();
                 }else{
-                    $query="select * from MACCHINARIO";
-                    $result=$connesione->query($query);
-                    while($row=$result->fetch_assoc()){
-                        echo "<tr>";
-                        echo "<td>".$row['ID']."</td>";
-                        echo "<td>".$row['PROSSIMA_MANUTENZIONE']."</td>";
-                        echo "<td>".$row['ULTIMA_MANUTENZIONE']."</td>";
-                         echo "<td>".$row['ULTIMA_MANUTENZIONE']."</td>";
-                        echo "</tr>";
-                    }
+                        $query="select * from MACCHINARIO";
+                        $result=$connesione->query($query);
+                        while($row=$result->fetch_assoc()){
+                            echo "<tr>";
+                            echo "<td>".$row['ID']."</td>";
+                            echo "<td>".$row['PROSSIMA_MANUTENZIONE']."</td>";
+                            echo "<td>".$row['ULTIMA_MANUTENZIONE']."</td>";
+                            if($row['CHIAMATA_MANUTENTORE'] == 1) {
+                                echo "<td><a href='pagina.php'><button>Chiamata Manutenzione</button></a></td>";
+                            } else {
+                                echo "<td>NO</td>";
+                            }
+                            echo "</tr>";
+                        }
                 }
                 ?>
             </table>
