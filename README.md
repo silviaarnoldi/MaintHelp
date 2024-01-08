@@ -33,7 +33,9 @@ manutentori,operatori e amministratori aziendali;
   * eliminare utente ** (FATTO)**
     
 # DIAGRAMMA E.R.:
-![289540651-284bf6fe-926b-4db6-bc2b-477dcd7a9828](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/58e8dee5-2e52-4ffb-90ca-e94624748b1b)
+
+![278418006-91bfdd0e-256f-4af3-8954-c7885f5d6471](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/d467e4a3-cc66-4854-81c1-8f9d98d0470c)
+
 
 
 
@@ -42,10 +44,9 @@ manutentori,operatori e amministratori aziendali;
 
 
 # ENTITA': 
-  * **MACCHINARIO**: ID, NOME,STATO;
+  * **MACCHINARIO**: ID, NOME,STATO, SCHEMA_ELECT,SCHEMA_MEC, CHIAMATA_MANUTENTORE;
   * **UTENTE**: ID,USERNAME,PASSWORD,NOME,COGNOME;
   * **DOCUMENTO**: ID, NOME,DATA;
-  * **INFORMATIVO**: SCHEMA_ELECT,SCHEMA_MEC;
   * **RICHIESTA**: STATO_MACCHINARIO;
   * **GUASTO**: ID;
   * **MECCANICO**:-;
@@ -72,8 +73,8 @@ manutentori,operatori e amministratori aziendali;
    
    
 # MODELLO RELAZIONALE:
- * MACCHINARIO(**ID**,NOME,STATO)
- * DOCUMENTO(**ID**,NOME,SCHEMA_ELECT,SCHEMA_MEC,TIPODOCUMENTO,TIPOGUASTO,DATA_INVIA,*UTENTE_ID*,TIPO_MANUTENZIONE,ORE_MANUTENZIONE,DESCRIZIONE,DATA_SCRIVE,*MACCHINARIO_ID*,*GUASTO_ID*)
+ * MACCHINARIO(**ID**,NOME,STATO,SCHEMA_ELECT,SCHEMA_MEC,CHIAMATA_MANUTENTORE)
+ * DOCUMENTO(**ID**,NOME,TIPODOCUMENTO,TIPOGUASTO,DATA_INVIA,*UTENTE_ID*,TIPO_MANUTENZIONE,ORE_MANUTENZIONE,DESCRIZIONE,DATA_SCRIVE,*MACCHINARIO_ID*,*GUASTO_ID*)
  * GUASTO(**ID**,TIPOGUASTO)
  * UTENTE(**ID**,USERNAME,PASSWORD,NOME,COGNOME,RUOLO)
      
@@ -125,14 +126,15 @@ ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
 
 scrivere DocManutenzionePreventiva e ricevere i DocMachinari
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/8569cb80-39ea-4644-b7e2-f8c3b3bc1535)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/beb97e83-ce3f-495e-bd5f-0e723c757f7c)
+
 
 
 
 
 scrivere DocManutenzioneGuasto e ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/20b608b8-7abd-413b-9f1f-d52c3ca81709)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/cd8447b0-0987-4cfc-8c79-c47ad9df81e0)
 
 
 
