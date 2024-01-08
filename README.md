@@ -125,14 +125,15 @@ ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
 
 scrivere DocManutenzionePreventiva e ricevere i DocMachinari
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/8569cb80-39ea-4644-b7e2-f8c3b3bc1535)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/beb97e83-ce3f-495e-bd5f-0e723c757f7c)
+
 
 
 
 
 scrivere DocManutenzioneGuasto e ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/20b608b8-7abd-413b-9f1f-d52c3ca81709)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/cd8447b0-0987-4cfc-8c79-c47ad9df81e0)
 
 
 
