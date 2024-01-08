@@ -4,7 +4,7 @@ session_start();
 if(!isset($_SESSION['ruolo'])){
     header("Location: login.php");
 }else{
-    if($_SESSION['ruolo']!="Operatore"){
+    if($_SESSION['ruolo']!="OPERATORE"){
         header("Location: login.php");
     }else{
         $nome=$_SESSION['nome'];
