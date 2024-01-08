@@ -3,7 +3,7 @@
     $username = $_POST['username'];
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
-    $ruolo = $_POST['ruolo'];
+   $ruolo = strtoupper($_SESSION['ruolo']);
     $conn = new mysqli('localhost','root','','MaintHelp'); 
 
     if ($conn->connect_error) {

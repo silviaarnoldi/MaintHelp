@@ -6,14 +6,14 @@ if(!isset($_SESSION['id'])){
 }
 $id=$_SESSION['id'];
 $nome=$_SESSION['nome'];
-$ruolo=$_SESSION['ruolo'];
-if($ruolo == "Amministratore"){
+$ruolo = strtoupper($_SESSION['ruolo']);;
+if($ruolo == "AMMINISTRATORE"){
     header("Location: homeAmministratore.php");
 }else{
-    if($ruolo == "Operatore"){
+    if($ruolo == "OPERATORE"){
         header("Location: homeOperatore.php");
     }else{
-        if($ruolo == "Manutentore"){
+        if($ruolo == "MANUTENTORE"){
             header("Location: homeManutentore.php");
         }
     }
