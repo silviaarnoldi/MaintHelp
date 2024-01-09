@@ -39,7 +39,7 @@ mysqli_close($connesione);
         <center>
         <tr>
         <td>
-            <form action="manutenzionePreventivacontroller.php" method="post">
+        <form action="manutenzionePreventivacontroller.php?ID=<?php echo $id_macchinario; ?>" method="post">
             <label for="data">Data:</label><br>
             <input type="date" id="data" name="data"><br>
             <label for="descrizione">Descrizione:</label><br>

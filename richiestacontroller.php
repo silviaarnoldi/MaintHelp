@@ -26,8 +26,6 @@
             $row = $result->fetch_assoc();
             $guasto_id = $row['ID'];
             $sql = "INSERT INTO DOCUMENTO (NOME, TIPODOCUMENTO, TIPOGUASTO, DATA_INVIA, OPERATORE_ID, MACCHINARIO_ID, GUASTO_ID) VALUES ('Documento', 'Richiesta', '$tipo_guasto', '$data', '$operatore_id', '$id_macchinario', '$guasto_id')";
-
-            // Esecuzione query
             if ($conn->query($sql) === TRUE) {
                 echo "Richiesta inviata con successo";
                 echo "<br>";
@@ -37,9 +35,9 @@
             }
             $chiamata_manutentore = 1;
             $sql = "UPDATE MACCHINARIO SET stato='$stato_macchinario', CHIAMATA_MANUTENTORE='$chiamata_manutentore' WHERE id='$id_macchinario'";
-            // Esecuzione query
+            
             if ($conn->query($sql) === TRUE) {
-               // echo "Stato del macchinario aggiornato con successo";
+               
             } else {
                 echo "Errore nell'aggiornamento dello stato del macchinario: " . $conn->error;
             }
