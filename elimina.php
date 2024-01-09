@@ -14,9 +14,7 @@
             </tr>
             <?php
                 session_start(); 
-
                 $connesione= new mysqli('localhost','root','','MaintHelp'); 
-
                 if($connesione->connect_error){
                     echo("Connection failed: " . $connesione->connect_error);
                     exit();
