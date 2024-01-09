@@ -1,16 +1,12 @@
 <?php
-    
-    $username = $_POST['username'];
-    $nome = $_POST['nome'];
-    $cognome = $_POST['cognome'];
-   $ruolo = strtoupper($_SESSION['ruolo']);
+    $id_utente = $_POST['id_utente'];
     $conn = new mysqli('localhost','root','','MaintHelp'); 
 
     if ($conn->connect_error) {
         die("Connessione fallita: " . $conn->connect_error);
     }
 
-    $sql = "DELETE FROM UTENTE WHERE NOME='$nome' AND COGNOME='$cognome' AND RUOLO='$ruolo' AND USERNAME='$username'";
+    $sql = "DELETE FROM UTENTE WHERE ID='$id_utente'";
 
     // Esecuzione query
     if ($conn->query($sql) === TRUE) {
