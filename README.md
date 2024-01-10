@@ -99,7 +99,9 @@ registare un utente
 
 eliminare utente
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/ed9395a2-ac7b-48dd-b944-54062c7be500)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/137a760b-301b-4ebb-a7b1-fe591351026b)
+
+
 
 
 **OPERATO:**
@@ -120,7 +122,8 @@ HOME:
 
 ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/f6b7dbd2-bc7a-4773-b5e9-e94ae34bb473)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/fa1bd26b-00ce-4498-9bae-c70bf499d40c)
+
 
 
 
