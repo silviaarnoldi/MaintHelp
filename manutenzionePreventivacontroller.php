@@ -12,7 +12,7 @@
         die("Connessione fallita: " . $conn->connect_error);
     }
     $oretot=$ore*60+$minuti;
-    $sql = "INSERT INTO DOCUMENTO (NOME,TIPODOCUMENTO,TIPO_MANUTENZIONE,DATA_SCRIVE, ORE_MANUTENZIONE, DESCRIZIONE, MANUTENTORE_ID, MACCHINARIO_ID) VALUES ('DOCUMENTO','manutenzione','preventiva','$data', '$oretot',  '$descrizione','$id_manutentore', '$id_macchinario')";
+    $sql = "INSERT INTO DOCUMENTO (NOME,TIPODOCUMENTO,TIPO_MANUTENZIONE,DATA_SCRIVE, ORE_MANUTENZIONE, DESCRIZIONE, MANUTENTORE_ID, MACCHINARIO_ID) VALUES ('DOCUMENTO','Manutenzione','preventiva','$data', '$oretot',  '$descrizione','$id_manutentore', '$id_macchinario')";
     if ($conn->query($sql) === TRUE) {
         $sql = "UPDATE MACCHINARIO SET PROSSIMA_MANUTENZIONE='$data_prossima', ULTIMA_MANUTENZIONE='$data' WHERE ID='$id_macchinario'";
         if ($conn->query($sql) === TRUE) {

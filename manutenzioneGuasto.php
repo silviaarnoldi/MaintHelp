@@ -12,18 +12,24 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "Nessun risultato trovato";
 }
-
-// Nuova query per selezionare tutti i campi dal documento
-$query_documento = "SELECT * FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario";
+//   seconda query
+$query_documento = "SELECT * FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Richiesta'";
 $result_documento = mysqli_query($connesione, $query_documento);
+$rows_documento = array();
 if (mysqli_num_rows($result_documento) > 0) {
     while($row_documento = mysqli_fetch_assoc($result_documento)) {
-        // Fai qualcosa con i dati del documento qui
+        $rows_documento[] = $row_documento;
     }
-} else {
-    echo "Nessun documento trovato";
 }
-
+// terza query
+$query_documento2 = "SELECT * FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Manutenzione'";
+$result_documento2 = mysqli_query($connesione, $query_documento2);
+$rows_documento2 = array();
+if (mysqli_num_rows($result_documento2) > 0) {
+    while($row_documento2 = mysqli_fetch_assoc($result_documento2)) {
+        $rows_documento2[] = $row_documento2;
+    }
+}
 // Chiusura connessione
 mysqli_close($connesione);
 ?>
@@ -44,7 +50,7 @@ mysqli_close($connesione);
         
     </style>
 <body>
-    <center><h1>Manutenzione Preventiva</h1> </center>
+    <center><h1>Manutenzione Guasto</h1> </center>
     </center>
     <table>
         <center>
@@ -70,11 +76,43 @@ mysqli_close($connesione);
         <td>
         <table border="1">
                 <tr>
-                    <th>Id Macchinario</th>
-                    <th>Data ultima manutenzione</th>
-                    <th>Data prossima manutenzione</th>
-                    <th>Chiamata manutenzione</th>
+                    <th>Id Chiamata</th>
+                    <th>Data Guasto</th>
+                    <th>Tipo Guasto</th>
+                    <th>Id Operatore</th>
                 </tr>
+                <?php
+                    foreach($rows_documento as $row_documento) {
+                        echo "<tr>";
+                        echo "<td>".$row_documento['ID']."</td>";
+                        echo "<td>".$row_documento['DATA_INVIA']."</td>";
+                        echo "<td>".$row_documento['TIPOGUASTO']."</td>";
+                        echo "<td>".$row_documento['OPERATORE_ID']."</td>";
+                        echo "</tr>";
+                    }
+                ?>
+            </table>
+            <br>
+            <br>
+            <table border="1">
+                <tr>
+                    <th>Id Manutenzione</th>
+                    <th>Data Manutenzione</th>
+                    <th>Descrizione</th>
+                    <th>Tipo Manutenzione</th>
+                    <th>Id Manutentore</th>
+                </tr>
+                <?php
+                    foreach($rows_documento as $row_documento2) {
+                        echo "<tr>";
+                        echo "<td>".$row_documento['ID']."</td>";
+                        echo "<td>".$row_documento['DATA_SCRIVE']."</td>";
+                        echo "<td>".$row_documento['DESCRIZIONE']."</td>";
+                        echo "<td>".$row_documento['TIPO_MANUTENZIONE']."</td>";
+                        echo "<td>".$row_documento['MANUTENTORE_ID']."</td>";
+                        echo "</tr>";
+                    }
+                ?>
             </table>
         </td>
     </tr>
