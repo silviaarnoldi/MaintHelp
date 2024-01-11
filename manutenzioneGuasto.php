@@ -107,7 +107,7 @@ mysqli_close($connesione);
                         echo "<tr>";
                         echo "<td>".$row_documento['ID']."</td>";
                         echo "<td>".$row_documento['DATA_SCRIVE']."</td>";
-                        echo "<td>".$row_documento['DESCRIZIONE']."</td>";
+                        echo "<td>".str_replace("\r\n", "<br>",$row_documento['DESCRIZIONE'])."</td>";
                         echo "<td>".$row_documento['TIPO_MANUTENZIONE']."</td>";
                         echo "<td>".$row_documento['MANUTENTORE_ID']."</td>";
                         echo "</tr>";
