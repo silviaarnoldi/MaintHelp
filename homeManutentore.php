@@ -122,7 +122,7 @@ if(!isset($_SESSION['ruolo'])){
                             echo "<td>".$row['MACCHINARIO_ID']."</td>";
                             echo "<td>";
                             echo "<form method='POST' action='eliminaManutenzionecontroller.php'>";
-                            echo "<input type='hidden' name='id_utente' value='".$row['ID']."'>";
+                            echo "<input type='hidden' name='id_manutenzione' value='".$row['ID']."'>";
                             echo "<button type='submit'>Elimina</button>";
                             echo "</form>";
                             echo "</td>";
