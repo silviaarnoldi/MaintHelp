@@ -4,7 +4,7 @@
     if ($conn->connect_error) {
         die("Connessione fallita: " . $conn->connect_error);
     }
-    $sql = "DELETE FROM UTENTE WHERE ID='$id_utente'";
+    $sql = "DELETE FROM UTENTE WHERE ID ='$id_utente'";
     if ($conn->query($sql) === TRUE) {
         echo "eliminazione effetuata";
         echo "<br>";
