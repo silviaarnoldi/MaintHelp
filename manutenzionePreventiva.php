@@ -12,7 +12,15 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "Nessun risultato trovato";
 }
-
+//seconda query deve salvare in un array gli username degli utenti che sono manutentori
+$query_utenti = "SELECT * FROM UTENTE WHERE RUOLO = 'MANUTENTORE'";
+$result_utenti = mysqli_query($connesione, $query_utenti);
+$rows_utenti = array();
+if (mysqli_num_rows($result_utenti) > 0) {
+    while($row_utenti = mysqli_fetch_assoc($result_utenti)) {
+        $rows_utenti[] = $row_utenti;
+    }
+}
 // Chiusura connessione
 mysqli_close($connesione);
 ?>
@@ -51,7 +59,11 @@ mysqli_close($connesione);
             <label for="data_prossima">Data della prossima manutenzione:</label><br>
             <input type="date" id="data_prossima" name="data_prossima"><br>
             <label for="id_manutentore">ID Manutentore:</label><br>
-            <input type="text" id="id_manutentore" name="id_manutentore"><br> <br>
+            <select  name="id_manutentore">
+                <?php foreach($rows_utenti as $row_utenti): ?>
+                    <option value="<?php echo $row_utenti['ID']; ?>"><?php echo $row_utenti['USERNAME']; ?></option>
+                <?php endforeach; ?>
+             </select> <br> <br>
             <input type="submit" value="Inserisci">
             <br><br>
         </form>
