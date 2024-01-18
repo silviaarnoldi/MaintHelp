@@ -149,5 +149,10 @@ scrivere DocManutenzioneGuasto e ricevere i DocMachinari,storici di DocManutenzi
 
 **PER CREARE IL DATABASE IN  SQL FAI COPIA IN COLLA DEL FILE "database.sql"** 
 
-** per il LOGIN e testare il REGISTRA ED ELIMINA utente, accedere con le credenziali username: **admin** , password: **esperia**
+** per il LOGIN e testare le varie funzionalita degli utenti, accedere con le credenziali  per:
+*  **AMMINISTRATORE**=> username: **admin** , password: **esperia** ;
+*  **MANUTENTORE**=> username: **mari** , password: **esperia** ;
+*  **OPERATORE**=> username: **pippo** , password: **esperia** ;
+
+
 

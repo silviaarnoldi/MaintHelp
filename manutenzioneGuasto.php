@@ -1,12 +1,12 @@
 <?php
-$connesione= new mysqli('localhost','root','','MaintHelp'); 
-if($connesione->connect_error){
-    echo("Connection failed: " . $connesione->connect_error);
+$connessione= new mysqli('localhost','root','','MaintHelp'); 
+if($connessione->connect_error){
+    echo("Connection failed: " . $connessione->connect_error);
     exit();
 }
-$id_macchinario = isset($_GET['ID']) ? mysqli_real_escape_string($connesione, $_GET['ID']) : null;
+$id_macchinario = isset($_GET['ID']) ? mysqli_real_escape_string($connessione, $_GET['ID']) : null;
 $query = "SELECT * FROM MACCHINARIO WHERE ID = $id_macchinario";
-$result = mysqli_query($connesione, $query);
+$result = mysqli_query($connessione, $query);
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 } else {
@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 //   seconda query
 $query_documento = "SELECT * FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Richiesta' OR TIPODOCUMENTO= 'Manutenzione'";
-$result_documento = mysqli_query($connesione, $query_documento);
+$result_documento = mysqli_query($connessione, $query_documento);
 $rows_documento = array();
 $rows_documento2 = array();
 if (mysqli_num_rows($result_documento) > 0) {
@@ -29,7 +29,7 @@ if (mysqli_num_rows($result_documento) > 0) {
 }
 /*// terza query
 $query_documento2 = "SELECT * FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Manutenzione'";
-$result_documento2 = mysqli_query($connesione, $query_documento2);
+$result_documento2 = mysqli_query($connessione, $query_documento2);
 $rows_documento2 = array();
 if (mysqli_num_rows($result_documento2) > 0) {
     while($row_documento2 = mysqli_fetch_assoc($result_documento2)) {
@@ -38,7 +38,7 @@ if (mysqli_num_rows($result_documento2) > 0) {
 }*/
 
 $query_utenti = "SELECT * FROM UTENTE WHERE RUOLO = 'MANUTENTORE'";
-$result_utenti = mysqli_query($connesione, $query_utenti);
+$result_utenti = mysqli_query($connessione, $query_utenti);
 $rows_utenti = array();
 if (mysqli_num_rows($result_utenti) > 0) {
     while($row_utenti = mysqli_fetch_assoc($result_utenti)) {
@@ -46,7 +46,7 @@ if (mysqli_num_rows($result_utenti) > 0) {
     }
 }
 // Chiusura connessione
-mysqli_close($connesione);
+mysqli_close($connessione);
 ?>
 <!DOCTYPE html>
 <html lang="">
@@ -55,11 +55,16 @@ mysqli_close($connesione);
             font-size: 22px;
         }
       table {
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: center;
+            margin-right: center;
         }
         form {
             font-size: 22px; 
+        }
+        p {
+            //centrarlo
+            text-align: center;
+            font-size: 22px;
         }
 
         
@@ -95,6 +100,7 @@ mysqli_close($connesione);
         <td>
         <?php
                     if(!empty($rows_documento)){
+                        echo("<h2> Storico delle Richieste</h2>");
                         echo "<table border='1'>";
                         echo"<tr><th>Id Chiamata</th><th>Data Guasto</th><th>Tipo Guasto</th><th>Id Operatore</th></tr>";
                         foreach($rows_documento as $row_documento) {
@@ -106,15 +112,14 @@ mysqli_close($connesione);
                             echo "</tr>";
                         }
                         echo "</table>";
-                    }else{
-                        echo "non esiste nessun record";
                     }
         ?>
             
             <br>
             <br>
             <?php
-                    if(!empty($rows_documento)){
+                    if(!empty($rows_documento2)){
+                        echo("<h2>Storico delle Manutenzioni</h2>");
                         echo "<table border='1'>";
                         echo"<tr><th>Id Manutenzione</th>
                         <th>Data Manutenzione</th>
@@ -131,11 +136,32 @@ mysqli_close($connesione);
                             echo "</tr>";
                         }
                         echo "</table>";
-                    }else{
-                        echo "non esiste nessun record";
                     }
         ?>
             
+        </td>
+        <td>
+        <?php
+                    if(!empty($rows_documento2)){
+                        echo("<h2>Storico delle Manutenzioni</h2>");
+                        echo "<table border='1'>";
+                        echo"<tr><th>Id Manutenzione</th>
+                        <th>Data Manutenzione</th>
+                        <th>Descrizione</th>
+                        <th>Tipo Manutenzione</th>
+                        <th>Id Manutentore</th></tr>";
+                        foreach($rows_documento as $row_documento) {
+                            echo "<tr>";
+                            echo "<td>".$row_documento['ID']."</td>";
+                            echo "<td>".$row_documento['DATA_SCRIVE']."</td>";
+                            echo "<td>".str_replace("\r\n", "<br>",$row_documento['DESCRIZIONE'])."</td>";
+                            echo "<td>".$row_documento['TIPO_MANUTENZIONE']."</td>";
+                            echo "<td>".$row_documento['MANUTENTORE_ID']."</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                    }
+        ?>
         </td>
     </tr>
     </center>
