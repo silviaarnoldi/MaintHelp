@@ -40,12 +40,8 @@
             <option value="ON">ON</option>
             <option value="OFF">OFF</option>
         </select> <br>  <br>
-        <label for="id_operatore">ID Operatore:</label>
-            <select  name="id_operatore">
-                <?php foreach($rows_utenti as $row_utenti): ?>
-                    <option value="<?php echo $row_utenti['ID']; ?>"><?php echo $row_utenti['USERNAME']; ?></option>
-                <?php endforeach; ?>
-             </select> <br> <br>
+        <label for="id_operatore">username Operatore:</label>
+        <input type="text" name="username_operatore" placeholder="username operatore "> <br>  <br>
         <input type="submit" value="Invia Richiesta"> 
     </form>
 </body>

@@ -22,7 +22,10 @@ if (mysqli_num_rows($result_documento) > 0) {
         if($row_documento['TIPODOCUMENTO'] == 'Richiesta'){
             $rows_documento[] = $row_documento;
         }else{
-            $rows_documento2[] = $row_documento;
+            if($row_documento['TIPODOCUMENTO'] == 'Manutenzione'){
+                $rows_documento2[] = $row_documento;
+            }
+            
         }
         
     }
@@ -112,12 +115,11 @@ mysqli_close($connessione);
                             echo "</tr>";
                         }
                         echo "</table>";
+                    }else{
                     }
         ?>
-            
-            <br>
-            <br>
-            <?php
+<br><br>
+<?php
                     if(!empty($rows_documento2)){
                         echo("<h2>Storico delle Manutenzioni</h2>");
                         echo "<table border='1'>";
@@ -126,7 +128,7 @@ mysqli_close($connessione);
                         <th>Descrizione</th>
                         <th>Tipo Manutenzione</th>
                         <th>Id Manutentore</th></tr>";
-                        foreach($rows_documento as $row_documento) {
+                        foreach($rows_documento2 as $row_documento) {
                             echo "<tr>";
                             echo "<td>".$row_documento['ID']."</td>";
                             echo "<td>".$row_documento['DATA_SCRIVE']."</td>";
@@ -136,32 +138,12 @@ mysqli_close($connessione);
                             echo "</tr>";
                         }
                         echo "</table>";
+                    }else{
                     }
         ?>
             
-        </td>
-        <td>
-        <?php
-                    if(!empty($rows_documento2)){
-                        echo("<h2>Storico delle Manutenzioni</h2>");
-                        echo "<table border='1'>";
-                        echo"<tr><th>Id Manutenzione</th>
-                        <th>Data Manutenzione</th>
-                        <th>Descrizione</th>
-                        <th>Tipo Manutenzione</th>
-                        <th>Id Manutentore</th></tr>";
-                        foreach($rows_documento as $row_documento) {
-                            echo "<tr>";
-                            echo "<td>".$row_documento['ID']."</td>";
-                            echo "<td>".$row_documento['DATA_SCRIVE']."</td>";
-                            echo "<td>".str_replace("\r\n", "<br>",$row_documento['DESCRIZIONE'])."</td>";
-                            echo "<td>".$row_documento['TIPO_MANUTENZIONE']."</td>";
-                            echo "<td>".$row_documento['MANUTENTORE_ID']."</td>";
-                            echo "</tr>";
-                        }
-                        echo "</table>";
-                    }
-        ?>
+            <br>
+            <br>
         </td>
     </tr>
     </center>
