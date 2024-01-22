@@ -8,6 +8,7 @@
         <input type="text" name="password" placeholder="password">  <br> <br>
         <input type="submit" value="modifica">
     </form>
+    <a href="profile.php">Torna alla home</a>
     </center>
     <?php
 if(isset($_GET['error'])){

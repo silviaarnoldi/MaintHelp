@@ -26,15 +26,14 @@ if($connesione->connect_error){
                 $_SESSION['nome']=$nome;
                 $_SESSION['ruolo']=$user['RUOLO'];
             }
+            $result->close();
+            header("Location: profile.php");
+        }else{
+            header("Location: login.php?err=Utente non trovato");
         }
-        $result->close();
-        header("Location: profile.php");
-        //echo(" id: ".$_SESSION['id']."".$id);
-        
-    }catch(Exception $e){
-        $err = $e->getMessage();
-        header("Location: registra.php?err=$err");
+    } catch (Exception $e) {
+        // L'utente non esiste, quindi reindirizza alla pagina di login
+        header("Location: login.php?err=Utente non trovato");
     }
-
 }
-?>
+    ?>
