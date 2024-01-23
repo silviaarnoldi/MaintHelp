@@ -5,7 +5,7 @@ web app per gestione dei documenti di manutenzioni e di documenti sui macchinari
 
 # PROBLEMA:
 
-Il sistema supporta i manutentori nella gestione completa delle manutenzioni, sia preventive che in risposta a guasti dei macchinari. Permette loro di ricevere informazioni dettagliate sullo stato dei macchinari, inclusi dettagli come l'ultima manutenzione, lo storico delle manutenzioni, chi le ha eseguite, la data della prossima manutenzione, la durata delle manutenzioni e lo storico dei guasti, evidenziando i guasti più ricorrenti.
+Il sistema supporta i manutentori nella gestione completa delle manutenzioni, sia preventive che in risposta a guasti dei macchinari. Permette loro di ricevere informazioni dettagliate sullo stato dei macchinari, inclusi dettagli come l'ultima manutenzione, lo storico delle manutenzioni, chi le ha eseguite, la data della prossima manutenzione, la durata delle manutenzioni e lo storico dei guasti, evidenziando i guasti più ricorrenti.In aggiunta il manutentore può cancellare la documentazione delle manutenzioni preventive e guasto eseguite nel tempo.
 
 Per gli operatori, il sistema facilita la segnalazione dei guasti, fornendo un elenco dettagliato di possibili guasti da compilare. Ciò consente ai manutentori di comprendere rapidamente il problema e di sapere come intervenire.
 
@@ -22,11 +22,12 @@ manutentori,operatori e amministratori aziendali;
   * scrivere il DocRichiesta ** (FATTO)**
 
 **MANUTENTORE**:
-  * scrivere DocManutenzionePreventiva
-  * scrivere DocManutenzioneGuasto
-  * ricevere il DocRichiesta
-  * ricevere i DocMachinari
-  * ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva
+  * scrivere DocManutenzionePreventiva ** (FATTO)**
+  * scrivere DocManutenzioneGuasto ** (FATTO)**
+  * ricevere la richiesta da parte del operatore  ** (FATTO)**
+  * ricevere i DocMachinari ** (FATTO)**
+  * ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva ** (FATTO)**
+  * eliminare DocManutenzionePreventiva e DocManutenzioneGuasto ** (FATTO)**
     
 **AMMINISTRATORE**:
   * registare un utente ** (FATTO)**
@@ -120,10 +121,9 @@ scrivere il DocRichiesta
 
 HOME:
 
-ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
+ricevere la richiesta da parte del operatore e ricevere i DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/fa1bd26b-00ce-4498-9bae-c70bf499d40c)
-
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/d0fe8f80-1ba3-46f9-b455-4887242525cf)
 
 
 
