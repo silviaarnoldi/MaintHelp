@@ -5,7 +5,11 @@ web app per gestione dei documenti di manutenzioni e di documenti sui macchinari
 
 # PROBLEMA:
 
+<<<<<<< HEAD
 Il sistema supporta i manutentori nella gestione completa delle manutenzioni, sia preventive che in risposta a guasti dei macchinari. Permette loro di ricevere informazioni dettagliate sullo stato dei macchinari, inclusi dettagli come l'ultima manutenzione, lo storico delle manutenzioni, chi le ha eseguite, la data della prossima manutenzione, la durata delle manutenzioni e lo storico dei guasti, evidenziando i guasti più ricorrenti.In aggiunta il manutentore può cancellare la documentazione delle manutenzioni preventive e guasto eseguite nel tempo.
+=======
+Il sistema supporta i manutentori nella gestione completa delle manutenzioni, sia preventive che in risposta a guasti dei macchinari. Permette loro di ricevere informazioni dettagliate sullo stato dei macchinari, inclusi dettagli come l'ultima manutenzione, lo storico delle manutenzioni, chi le ha eseguite, la data della prossima manutenzione, la durata delle manutenzioni e lo storico dei guasti, evidenziando i guasti più ricorrenti. in aggiunta il manutentore può cancellare la documentazione delle manutenzioni preventive e guasto eseguite nel tempo.
+>>>>>>> 2566c1ea50be2efc35198dd4d1208f2d16f29660
 
 Per gli operatori, il sistema facilita la segnalazione dei guasti, fornendo un elenco dettagliato di possibili guasti da compilare. Ciò consente ai manutentori di comprendere rapidamente il problema e di sapere come intervenire.
 
@@ -24,7 +28,11 @@ manutentori,operatori e amministratori aziendali;
 **MANUTENTORE**:
   * scrivere DocManutenzionePreventiva ** (FATTO)**
   * scrivere DocManutenzioneGuasto ** (FATTO)**
+<<<<<<< HEAD
   * ricevere la richiesta da parte del operatore  ** (FATTO)**
+=======
+  * ricevere il DocRichiesta ** (FATTO)**
+>>>>>>> 2566c1ea50be2efc35198dd4d1208f2d16f29660
   * ricevere i DocMachinari ** (FATTO)**
   * ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva ** (FATTO)**
   * eliminare DocManutenzionePreventiva e DocManutenzioneGuasto ** (FATTO)**
@@ -121,7 +129,14 @@ scrivere il DocRichiesta
 
 HOME:
 
+<<<<<<< HEAD
 ricevere la richiesta da parte del operatore e ricevere i DocManutenzionePreventiva
+=======
+ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
+
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/d0fe8f80-1ba3-46f9-b455-4887242525cf)
+
+>>>>>>> 2566c1ea50be2efc35198dd4d1208f2d16f29660
 
 ![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/d0fe8f80-1ba3-46f9-b455-4887242525cf)
 
