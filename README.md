@@ -22,11 +22,12 @@ manutentori,operatori e amministratori aziendali;
   * scrivere il DocRichiesta ** (FATTO)**
 
 **MANUTENTORE**:
-  * scrivere DocManutenzionePreventiva
-  * scrivere DocManutenzioneGuasto
-  * ricevere il DocRichiesta
-  * ricevere i DocMachinari
-  * ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva
+  * scrivere DocManutenzionePreventiva ** (FATTO)**
+  * scrivere DocManutenzioneGuasto ** (FATTO)**
+  * ricevere il DocRichiesta ** (FATTO)**
+  * ricevere i DocMachinari ** (FATTO)**
+  * ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva ** (FATTO)**
+  * eliminare DocManutenzionePreventiva e DocManutenzioneGuasto ** (FATTO)**
     
 **AMMINISTRATORE**:
   * registare un utente ** (FATTO)**
@@ -122,7 +123,8 @@ HOME:
 
 ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/fa1bd26b-00ce-4498-9bae-c70bf499d40c)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/d0fe8f80-1ba3-46f9-b455-4887242525cf)
+
 
 
 
