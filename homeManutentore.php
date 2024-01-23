@@ -19,7 +19,6 @@ if(!isset($_SESSION['ruolo'])){
     <body>
         <center>
             <h1>Manutentore: <?php echo $nome; ?></h1>
-            <br>
             <h1>Manutenzioni:</h1>
             <table border="1">
                 <tr>

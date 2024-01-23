@@ -30,15 +30,17 @@ if (mysqli_num_rows($result_documento) > 0) {
         
     }
 }
-/*// terza query
-$query_documento2 = "SELECT * FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Manutenzione'";
-$result_documento2 = mysqli_query($connessione, $query_documento2);
-$rows_documento2 = array();
-if (mysqli_num_rows($result_documento2) > 0) {
-    while($row_documento2 = mysqli_fetch_assoc($result_documento2)) {
-        $rows_documento2[] = $row_documento2;
+// terza query
+//$query_documento3 = "SELECT * FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Richiesta' AND ";
+// query che stampi tutti i guasti(TIPOGUASTO) più frequenti e riordinati per frequenza 
+$query_documento3 = "SELECT TIPOGUASTO, COUNT(*) AS NUMERO FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Richiesta' GROUP BY TIPOGUASTO ORDER BY NUMERO DESC";
+$result_documento3 = mysqli_query($connessione, $query_documento3);
+$rows_documento3 = array();
+if (mysqli_num_rows($result_documento3) > 0) {
+    while($row_documento3 = mysqli_fetch_assoc($result_documento3)) {
+        $rows_documento3[] = $row_documento3;
     }
-}*/
+}
 
 $query_utenti = "SELECT * FROM UTENTE WHERE RUOLO = 'MANUTENTORE'";
 $result_utenti = mysqli_query($connessione, $query_utenti);
@@ -142,6 +144,24 @@ mysqli_close($connessione);
                     }
         ?>
             
+            <br>
+            <br>
+           
+            <?php
+                    if(!empty($rows_documento3)){
+                        echo(" <h3>Guasti Ricorrenti</h3>");
+                        echo "<table border='1'>";
+                        echo"<tr><th>Tipo Guasto</th><th>Numero di frequenza</th></tr>";
+                        foreach($rows_documento3 as $row_documento) {
+                            echo "<tr>";
+                            echo "<td>".$row_documento['TIPOGUASTO']."</td>";
+                            echo "<td>".$row_documento['NUMERO']."</td>";
+                            echo "</tr>";
+                        }
+                        echo "</table>";
+                    }else{
+                    }
+        ?>
             <br>
             <br>
         </td>
