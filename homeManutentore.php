@@ -73,7 +73,7 @@ if(!isset($_SESSION['ruolo'])){
                         echo("Connection failed: " . $connesione->connect_error);
                         exit();
                     }else{
-                        $query="select * from DOCUMENTO where TIPO_MANUTENZIONE='preventiva'";
+                        $query="select * from DOCUMENTO where TIPO_MANUTENZIONE='preventiva' AND MANUTENTORE_ID='$id'";
                         $result=$connesione->query($query);
                         while($row=$result->fetch_assoc()){
                             echo "<tr>";
@@ -112,7 +112,7 @@ if(!isset($_SESSION['ruolo'])){
                         echo("Connection failed: " . $connesione->connect_error);
                         exit();
                     }else{
-                        $query="select * from DOCUMENTO where TIPO_MANUTENZIONE='Guasto'";
+                        $query="select * from DOCUMENTO where TIPO_MANUTENZIONE='Guasto' AND MANUTENTORE_ID='$id'";
                         $result=$connesione->query($query);
                         while($row=$result->fetch_assoc()){
                             echo "<tr>";

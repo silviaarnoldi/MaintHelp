@@ -31,8 +31,6 @@ if (mysqli_num_rows($result_documento) > 0) {
     }
 }
 // terza query
-//$query_documento3 = "SELECT * FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Richiesta' AND ";
-// query che stampi tutti i guasti(TIPOGUASTO) più frequenti e riordinati per frequenza 
 $query_documento3 = "SELECT TIPOGUASTO, COUNT(*) AS NUMERO FROM DOCUMENTO WHERE MACCHINARIO_ID = $id_macchinario AND TIPODOCUMENTO= 'Richiesta' GROUP BY TIPOGUASTO ORDER BY NUMERO DESC";
 $result_documento3 = mysqli_query($connessione, $query_documento3);
 $rows_documento3 = array();
@@ -42,14 +40,6 @@ if (mysqli_num_rows($result_documento3) > 0) {
     }
 }
 
-$query_utenti = "SELECT * FROM UTENTE WHERE RUOLO = 'MANUTENTORE'";
-$result_utenti = mysqli_query($connessione, $query_utenti);
-$rows_utenti = array();
-if (mysqli_num_rows($result_utenti) > 0) {
-    while($row_utenti = mysqli_fetch_assoc($result_utenti)) {
-        $rows_utenti[] = $row_utenti;
-    }
-}
 // Chiusura connessione
 mysqli_close($connessione);
 ?>
@@ -93,11 +83,8 @@ mysqli_close($connessione);
             <label for="data_prossima">Data della prossima manutenzione:</label><br>
             <input type="date" id="data_prossima" name="data_prossima"><br>
             <label for="id_manutentore">ID Manutentore:</label><br>
-            <select  name="id_manutentore">
-                <?php foreach($rows_utenti as $row_utenti): ?>
-                    <option value="<?php echo $row_utenti['ID']; ?>"><?php echo $row_utenti['USERNAME']; ?></option>
-                <?php endforeach; ?>
-             </select> <br> <br>
+            <input type="text" id="id_manutentore" name="id_manutentore"><br>
+            <br> <br>
             <input type="submit" value="Inserisci">
             <br><br>
         </form>
