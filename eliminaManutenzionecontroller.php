@@ -6,9 +6,7 @@
     }
     $sql = "DELETE FROM DOCUMENTO WHERE ID='$id_manutenzione'";
     if ($conn->query($sql) === TRUE) {
-        echo "eliminazione effetuata";
-        echo "<br>";
-        echo "<a href='profile.php'>Torna alla home</a>";
+        header("Location: profile.php");
     } else {
         echo "Errore nell'eliminazione dell'utente: " . $conn->error;
     }

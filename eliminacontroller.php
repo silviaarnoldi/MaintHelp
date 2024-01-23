@@ -7,9 +7,7 @@
     }
     $sql = "DELETE FROM UTENTE WHERE ID='$id_utente'";
     if ($conn->query($sql) === TRUE) {
-        echo "eliminazione effetuata";
-        echo "<br>";
-        echo "<a href='profile.php'>Torna alla home</a>";
+        header("Location: elimina.php");
     } else {
         echo "Errore nell'eliminazione dell'utente: " . $conn->error;
     }
