@@ -8,6 +8,7 @@ if(!isset($_SESSION['ruolo'])){
         header("Location: login.php");
     }else{
         $nome=$_SESSION['nome'];
+        $id=$_SESSION['id'];
     }
 }
 /*<h1>Benvenuto <?php echo $ruolo; ?></h1>*/
@@ -16,7 +17,7 @@ if(!isset($_SESSION['ruolo'])){
 <html lang="">
     <body>
         <center>
-            <h1>Amministratore: <?php echo $nome; ?></h1> <br> 
+            <h1>Amministratore: <?php echo $nome; echo "    <a href='modificaUtente.php?ID=".$id."'><button> modifica credenziali</button></a>" ?></h1> <br>
         <form action="registra.php" method="post">
             <input type="submit" value="Registra Utente"> <br> <br>
         </form>

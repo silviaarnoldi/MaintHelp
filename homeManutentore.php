@@ -18,7 +18,7 @@ if(!isset($_SESSION['ruolo'])){
 <html lang="">
     <body>
         <center>
-            <h1>Manutentore: <?php echo $nome; ?></h1>
+            <h1>Manutentore: <?php echo $nome; echo "    <a href='modificaUtente.php?ID=".$id."'><button> modifica credenziali</button></a>" ?></h1> <br> 
             <h1>Manutenzioni:</h1>
             <table border="1">
                 <tr>

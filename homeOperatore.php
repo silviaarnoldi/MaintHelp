@@ -18,7 +18,7 @@ if(!isset($_SESSION['ruolo'])){
 <html lang="">
     <body>
     <center>
-        <h1>Operatore: <?php echo $nome;?></h1> <br> 
+        <h1>Operatore: <?php echo $nome; echo "    <a href='modificaUtente.php?ID=".$id."'><button> modifica credenziali</button></a>" ?></h1> <br> 
     <form action="richiesta.php?ID=<?php echo $id; ?>".$id. method="post">
             <input type="submit" value="invia richiesta"> <br>  <br>
         </form>
