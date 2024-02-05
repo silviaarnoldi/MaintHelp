@@ -40,12 +40,12 @@ if(!isset($_SESSION['ruolo'])){
                             echo "<td>".$row['ID']."</td>";
                             echo "<td>".$row['ULTIMA_MANUTENZIONE']."</td>";
                             if($row['PROSSIMA_MANUTENZIONE'] <= date("Y-m-d")) {
-                                echo "<td><a href='manutenzionePreventiva.php?ID=".$row['ID']."'><button>OGGI</button></a></td>";
+                                echo "<td><a href='manutenzionePreventiva.php?ID=".$row['ID']."&IDMANUTENTORE=".$id."'><button>OGGI</button></a></td>";
                             } else {
                                 echo "<td>".$row['PROSSIMA_MANUTENZIONE']."</td>";
                             }
                             if($row['CHIAMATA_MANUTENTORE'] == 1) {
-                                echo "<td><a href='manutenzioneGuasto.php?ID=".$row['ID']."'><button>Chiamata Manutenzione</button></a></td>";
+                                echo "<td><a href='manutenzioneGuasto.php?ID=".$row['ID']."&IDMANUTENTORE=".$id."'><button>Chiamata Manutenzione</button></a></td>";
                             } else {
                                 echo "<td>NO</td>";
                             }

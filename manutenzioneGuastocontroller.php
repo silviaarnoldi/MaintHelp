@@ -3,7 +3,7 @@
     $ore = $_POST['ore'];
     $minuti = $_POST['minuti'];
     $data_prossima = $_POST['data_prossima'];
-    $id_manutentore = $_POST['id_manutentore'];
+    $id_manutentore = $_GET['IDMANUTENTORE'];
     $id_macchinario = $_GET['ID'];
     $descrizione = $_POST['descrizione'];
 
@@ -16,7 +16,7 @@
     if ($conn->query($sql) === TRUE) {
         $sql = "UPDATE MACCHINARIO SET PROSSIMA_MANUTENZIONE='$data_prossima', ULTIMA_MANUTENZIONE='$data', CHIAMATA_MANUTENTORE= '0' WHERE ID='$id_macchinario'";
         if ($conn->query($sql) === TRUE) {
-            echo "Manutenzione preventiva eseguita con successo";
+            echo "Manutenzione per il guasto eseguita con successo";
             echo "<br>";
             echo "<a href='profile.php'>Torna alla home</a>";
         } else {

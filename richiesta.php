@@ -5,25 +5,14 @@
         exit();
     }
 
-    $query_utenti = "SELECT * FROM UTENTE WHERE RUOLO = 'OPERATORE'";
-    $result_utenti = mysqli_query($connessione, $query_utenti);
-    $rows_utenti = array();
-    if (mysqli_num_rows($result_utenti) > 0) {
-        while($row_utenti = mysqli_fetch_assoc($result_utenti)) {
-            $rows_utenti[] = $row_utenti;
-        }
-    }
-    
-
-    // Chiusura connessione
-    mysqli_close($connessione);
+   $id_operatore=$_GET['ID']
 ?>
 <!DOCTYPE html>
 <html lang="">
 <body>
     <center>
     <h1>INVIA RICHIESTA</h1>
-    <form action="richiestacontroller.php" method="post">
+    <form action="richiestacontroller.php?ID=<?php echo $id_operatore;?>" method="post">
         <label for="data">Data:</label>
         <input type="date" name="data"> <br>  <br>
         <label for="id_macchinario">ID Macchinario:</label> 
@@ -39,9 +28,7 @@
         <select name="stato_macchinario">
             <option value="ON">ON</option>
             <option value="OFF">OFF</option>
-        </select> <br>  <br>
-        <label for="id_operatore">username Operatore:</label>
-        <input type="text" name="username_operatore" placeholder="username operatore "> <br>  <br>
+        </select> <br>  
         <input type="submit" value="Invia Richiesta"> 
     </form>
 </body>

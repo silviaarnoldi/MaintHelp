@@ -5,6 +5,7 @@ if($connessione->connect_error){
     exit();
 }
 $id_macchinario = isset($_GET['ID']) ? mysqli_real_escape_string($connessione, $_GET['ID']) : null;
+$id_manutentore = $_GET['IDMANUTENTORE'];
 $query = "SELECT * FROM MACCHINARIO WHERE ID = $id_macchinario";
 $result = mysqli_query($connessione, $query);
 if (mysqli_num_rows($result) > 0) {
@@ -71,7 +72,7 @@ mysqli_close($connessione);
         <center>
         <tr>
         <td>
-        <form action="manutenzioneGuastocontroller.php?ID=<?php echo $id_macchinario; ?>" method="post">
+        <form action="manutenzioneGuastocontroller.php?ID=<?php echo $id_macchinario; ?>&IDMANUTENTORE=<?php echo $id_manutentore; ?>" method="post">
             <label for="data">Data:</label><br>
             <input type="date" id="data" name="data"><br>
             <label for="descrizione">Descrizione:</label><br>
@@ -81,9 +82,7 @@ mysqli_close($connessione);
             <label for="minuti">Minuti di manutenzione:</label><br>
             <input type="number" id="minuti" name="minuti" min="0" max="59"><br>
             <label for="data_prossima">Data della prossima manutenzione:</label><br>
-            <input type="date" id="data_prossima" name="data_prossima"><br>
-            <label for="id_manutentore">ID Manutentore:</label><br>
-            <input type="text" id="id_manutentore" name="id_manutentore"><br>
+            <input type="date" id="data_prossima" name="data_prossima">
             <br> <br>
             <input type="submit" value="Inserisci">
             <br><br>

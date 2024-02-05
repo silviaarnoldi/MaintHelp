@@ -3,7 +3,7 @@
     $id_macchinario = $_POST['id_macchinario'];
     $tipo_guasto = $_POST['tipo_guasto'];
     $stato_macchinario = $_POST['stato_macchinario'];
-    $username_operatore = $_POST['username_operatore'];
+    $operatore_id = $_GET['ID'];
     if($stato_macchinario == "ON") {
         $stato_macchinario = 1;
     } else {
@@ -13,12 +13,6 @@
     if ($conn->connect_error) {
         die("Connessione fallita: " . $conn->connect_error);
     }
-    $sql = "SELECT id FROM UTENTE WHERE username='$username_operatore' AND ruolo='Operatore'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $operatore_id = $row['id'];
         $sql = "SELECT ID FROM GUASTO WHERE TIPOGUASTO='$tipo_guasto'";
         $result = $conn->query($sql);
 
@@ -45,10 +39,6 @@
             
             echo "Tipo di guasto non trovato";
         }
-    } else {
-        
-        echo "Operatore non trovato";
-    }
 
     $conn->close();
 ?>

@@ -3,10 +3,10 @@
     $ore = $_POST['ore'];
     $minuti = $_POST['minuti'];
     $data_prossima = $_POST['data_prossima'];
-    $id_manutentore = $_POST['id_manutentore'];
+    $id_manutentore = $_GET['IDMANUTENTORE'];
     $id_macchinario = $_GET['ID'];
     $descrizione = $_POST['descrizione'];
-
+    
     $conn = new mysqli('localhost','root','','MaintHelp'); 
     if ($conn->connect_error) {
         die("Connessione fallita: " . $conn->connect_error);
