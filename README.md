@@ -9,7 +9,7 @@ Il sistema supporta i manutentori nella gestione completa delle manutenzioni, si
 
 Per gli operatori, il sistema facilita la segnalazione dei guasti, fornendo un elenco dettagliato di possibili guasti da compilare. Ciò consente ai manutentori di comprendere rapidamente il problema e di sapere come intervenire.
 
-Inoltre, il sistema consente ai manutentori di registrare tutte le informazioni relative alle manutenzioni eseguite, sia preventive che in seguito a guasti. L'Amministratore ha il compito di gestire i lavoratori, registrando nuovi manutentori o operatori e rimuovendoli quando necessario.
+Inoltre, il sistema consente ai manutentori di registrare tutte le informazioni relative alle manutenzioni eseguite, sia preventive che in seguito a guasti. L'Amministratore ha il compito di gestire i lavoratori, registrando nuovi manutentori o operatori e rimuovendoli quando necessario e modificarli.
 
 # TARGET: 
 manutentori,operatori e amministratori aziendali;
@@ -17,6 +17,7 @@ manutentori,operatori e amministratori aziendali;
 # FUNZIONALITA': 
 **UTENTI**:
   * accedere alla piattaforma ** (FATTO)**
+  * modificare credenziali ** (FATTO)**
     
 **OPERATORE**:
   * scrivere il DocRichiesta ** (FATTO)**
@@ -35,6 +36,7 @@ manutentori,operatori e amministratori aziendali;
 **AMMINISTRATORE**:
   * registare un utente ** (FATTO)**
   * eliminare utente ** (FATTO)**
+  * modificare utente ** (FATTO)**
     
 # DIAGRAMMA E.R.:
 
