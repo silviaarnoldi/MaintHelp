@@ -129,7 +129,8 @@ HOME:
 
 scrivere il DocRichiesta
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/f1b16638-ed83-4418-8575-b8a8b786ca41)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/bd8f1805-bc87-4170-a121-39366d15b103)
+
 
 
 **MANUTENTORE:**
