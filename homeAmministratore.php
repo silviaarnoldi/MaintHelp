@@ -22,7 +22,7 @@ if(!isset($_SESSION['ruolo'])){
             <input type="submit" value="Registra Utente"> <br> <br>
         </form>
         <form action="elimina.php" method="post"> 
-            <input type="submit" value="Elimina Utente"> <br> <br>
+            <input type="submit" value="Elimina o Modifica Utente"> <br> <br>
         </form>
         <a href="logout.php">Logout</a>
         </center>

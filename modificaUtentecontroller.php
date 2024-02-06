@@ -19,11 +19,11 @@ if($connesione->connect_error){
         header("Location: modificaUtente.php");
     } else {
         try{
-            $registra="UPDATE UTENTE SET username='$username', password='$password' where ID='$id'";
+            $registra="UPDATE UTENTE SET USERNAME='$username', PASSWORD='$password' WHERE ID='$id'";
             $connesione->query($registra);
             echo "Modifiche effetuate";
             echo "<br>";
-            echo "<a href='profile.php'>Torna alla home</a>";
+            echo "<a href='login.php'>login</a>";
         }catch(Exception $e){
             $err = $e->getMessage();
             header("Location: modificaUtente.php?err=$err");

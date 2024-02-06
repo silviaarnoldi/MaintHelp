@@ -11,6 +11,7 @@
                 <th>Username</th>
                 <th>Ruolo</th>
                 <th>Elimina</th>
+                <th>Modifica</th>
             </tr>
             <?php
                 session_start(); 
@@ -33,6 +34,12 @@
                         echo "<form method='POST' action='eliminacontroller.php'>";
                         echo "<input type='hidden' name='id_utente' value='".$row['ID']."'>";
                         echo "<button type='submit'>Elimina</button>";
+                        echo "</form>";
+                        echo "</td>";
+                        echo "<td>";
+                        echo "<form method='POST' action='modifica.php'>";
+                        echo "<input type='hidden' name='id_utente' value='".$row['ID']."'>";
+                        echo "<button type='submit'>Modifica</button>";
                         echo "</form>";
                         echo "</td>";
                         echo "</tr>";
