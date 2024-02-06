@@ -140,13 +140,15 @@ HOME:
 ricevere la richiesta da parte del operatore e ricevere i DocManutenzionePreventiva
 ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/c150ec83-8240-4305-9e1c-8016be9f9149)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/847f2066-8ddf-44c7-b37c-39209d247491)
+
 
 
 
 scrivere DocManutenzionePreventiva e ricevere i DocMachinari
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/beb97e83-ce3f-495e-bd5f-0e723c757f7c)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/ea800b77-93fb-4068-a1a4-c92af6d64ade)
+
 
 
 
