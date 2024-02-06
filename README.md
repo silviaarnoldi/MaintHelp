@@ -85,15 +85,21 @@ manutentori,operatori e amministratori aziendali;
  * UTENTE(**ID**,USERNAME,PASSWORD,NOME,COGNOME,RUOLO)
      
 # MOCKUP: 
+**UTENTE:**
 accedere alla piattaforma
 
 ![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/f9f69fb7-add1-48a7-8998-fde7f9053a2b)
+
+modifica credenziali:
+
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/0c1dc707-f169-45dc-bda8-38840cf85852)
+
 
 **AMMINISTRATORE:**
 
 HOME:
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/a7879202-97b1-4103-982e-057ece568cd6)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/fd130fcb-a701-4fed-875d-aa9841dc9d20)
 
 
 
@@ -103,9 +109,13 @@ registare un utente
 ![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/3a1452a6-c892-480b-93b5-f47c75894e7f)
 
 
-eliminare utente
+eliminare e modifica utente
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/137a760b-301b-4ebb-a7b1-fe591351026b)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/865b3dc9-47eb-4fd4-9be3-569e53f7877d)
+
+
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/2c17ae55-320b-46da-a753-ed5b385d9ee8)
+
 
 
 
@@ -113,7 +123,7 @@ eliminare utente
 **OPERATO:**
 HOME:
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/98c7406f-5adc-4b99-aa35-68213bee1682)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/5f03e844-a207-46ba-ba8d-4883321f0c92)
 
 
 
@@ -129,7 +139,8 @@ HOME:
 ricevere la richiesta da parte del operatore e ricevere i DocManutenzionePreventiva
 ricevere il DocRichiesta e ricevere i DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/d0fe8f80-1ba3-46f9-b455-4887242525cf)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/c150ec83-8240-4305-9e1c-8016be9f9149)
+
 
 
 scrivere DocManutenzionePreventiva e ricevere i DocMachinari
@@ -142,7 +153,7 @@ scrivere DocManutenzionePreventiva e ricevere i DocMachinari
 
 scrivere DocManutenzioneGuasto e ricevere i DocMachinari,storici di DocManutenzioneGuasto e DocManutenzionePreventiva
 
-![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/cd8447b0-0987-4cfc-8c79-c47ad9df81e0)
+![image](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/448b1b5b-bf16-46e5-8798-a3a938fd6959)
 
 
 
