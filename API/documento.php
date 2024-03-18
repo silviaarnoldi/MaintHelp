@@ -5,11 +5,11 @@ if ($conn->connect_error) {
 }
 if(isset($_SERVER['PATH_INFO'])){
     $id=ltrim($_SERVER['PATH_INFO'],'/');
-    $sql = "SELECT * FROM UTENTE WHERE id=?";
+    $sql = "SELECT * FROM DOCUMENTO WHERE id=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
 }else{
-    $sql = "SELECT * FROM UTENTE";
+    $sql = "SELECT * FROM DOCUMENTO";
     $stmt = $conn->prepare($sql);
 }
 $stmt->execute();
@@ -24,7 +24,7 @@ if($result->num_rows > 0){
     header('Access-Control-Allow-Origin: *');
     echo $json;
 }else{
-    echo "Nessun utente trovato";
+    echo "Nessun documento trovato";
 }
 $stmt->close();
 $conn->close();
