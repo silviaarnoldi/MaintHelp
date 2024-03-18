@@ -1,32 +1,49 @@
+
 <?php
+// 1. connessione al database
 $conn = new mysqli('localhost','root','','MaintHelp');
 if ($conn->connect_error) {
     die("Connessione fallita: " . $conn->connect_error);
 }
-if(isset($_SERVER['PATH_INFO'])){
-    $id=ltrim($_SERVER['PATH_INFO'],'/');
-    $sql = "SELECT * FROM GUASTO WHERE id=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $id);
-}else{
-    $sql = "SELECT * FROM GUASTO";
-    $stmt = $conn->prepare($sql);
-}
-$stmt->execute();
-$result = $stmt->get_result();
-if($result->num_rows > 0){
-    $utenti = array();
-    while($row = $result->fetch_assoc()){
-        $utenti[] = $row;
-    }
-    $json=json_encode($utenti, JSON_PRETTY_PRINT);
-    header('Content-Type: application/json');
-    header('Access-Control-Allow-Origin: *');
-    echo $json;
-}else{
-    echo "Nessun guasto trovato";
-}
-$stmt->close();
-$conn->close();
 
+if(isset($_GET['id'])) {
+    // Se è specificato un ID, esegui la query per ottenere solo l'utente specificato
+    $userId = $_GET['id'];
+    $sqlguasti = "SELECT * FROM GUASTO WHERE ID = $userId";
+} else {
+    // Altrimenti, esegui la query per ottenere tutti gli guasti
+    $sqlguasti = "SELECT * FROM GUASTO";
+}
+
+$resultguasti = $conn->query($sqlguasti);
+
+// Controllo se la query ha prodotto risultati
+if ($resultguasti === false) {
+    die("Errore nella query: " . $conn->error);
+}
+
+// Array per contenere i dati degli guasti
+$guasti = array();
+
+// Iterazione sui risultati della query per estrarre i dati degli guasti
+while ($rowGUASTO = $resultguasti->fetch_assoc()) {
+    $id = $rowGUASTO["ID"];
+    $tipoguasto = isset($rowGUASTO["TIPOGUASTO"]) ? $rowGUASTO["TIPOGUASTO"] : "";
+   
+    $guasto = array(
+        "ID" => $id,
+        "TIPOGUASTO" => $tipoguasto
+
+    );
+
+    // Aggiungi l'utente all'array degli guasti
+    $guasti[] = $guasto;
+}
+
+// 4. restituire i dati in formato JSON
+header('Content-Type: application/json');
+echo json_encode($guasti);
+
+// 5. Chiudi la connessione
+$conn->close();
 ?>

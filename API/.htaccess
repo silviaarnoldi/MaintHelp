@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /www/API/
+
+# Reindirizzamento per utente.php con ID
+RewriteRule ^utente/(\d+)/?$ utente.php?id=$1 [L]
+
+# Reindirizzamento per utente.php
+RewriteRule ^utente/?$ utente.php [L]
+
+# Reindirizzamento per documento.php con ID
+RewriteRule ^documento/(\d+)/?$ documento.php?id=$1 [L]
+
+# Reindirizzamento per documento.php
+RewriteRule ^documento/?$ documento.php [L]
+
+# Reindirizzamento per guasto.php con ID
+RewriteRule ^guasto/(\d+)/?$ guasto.php?id=$1 [L]
+
+# Reindirizzamento per guasto.php
+RewriteRule ^guasto/?$ guasto.php [L]
+
+# Reindirizzamento per macchinario.php con ID
+RewriteRule ^macchinario/(\d+)/?$ macchinario.php?id=$1 [L]
+
+# Reindirizzamento per macchinario.php
+RewriteRule ^macchinario/?$ macchinario.php [L]
