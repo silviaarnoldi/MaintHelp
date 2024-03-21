@@ -40,7 +40,8 @@ manutentori,operatori e amministratori aziendali;
     
 # DIAGRAMMA E.R.:
 
-![278418006-91bfdd0e-256f-4af3-8954-c7885f5d6471](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/d467e4a3-cc66-4854-81c1-8f9d98d0470c)
+![schemaER](https://github.com/silviaarnoldi/MaintHelp/assets/101811166/1f98025c-6a1b-4d5c-9992-f3dba99ce332)
+
 
 
 
