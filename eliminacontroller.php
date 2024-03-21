@@ -1,5 +1,6 @@
 <?php
     $id_utente = $_POST['id_utente'];
+    
     Echo $id_utente;
     $conn = new mysqli('localhost','root','','MaintHelp'); 
     if ($conn->connect_error) {

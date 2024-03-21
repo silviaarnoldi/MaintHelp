@@ -25,6 +25,7 @@ if($connesione->connect_error){
                 $_SESSION['id']=$id;
                 $_SESSION['nome']=$nome;
                 $_SESSION['ruolo']=$user['RUOLO'];
+                $_SESSION['azienda']=$user['AZIENDA_ID'];
             }
             $result->close();
             header("Location: profile.php");
