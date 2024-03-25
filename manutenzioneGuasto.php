@@ -1,9 +1,5 @@
 <?php
-$connessione= new mysqli('localhost','root','','MaintHelp'); 
-if($connessione->connect_error){
-    echo("Connection failed: " . $connessione->connect_error);
-    exit();
-}
+include "connessione.php";
 $id_macchinario = isset($_GET['ID']) ? mysqli_real_escape_string($connessione, $_GET['ID']) : null;
 $id_manutentore = $_GET['IDMANUTENTORE'];
 $query = "SELECT * FROM MACCHINARIO WHERE ID = $id_macchinario";

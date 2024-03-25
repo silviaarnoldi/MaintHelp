@@ -9,7 +9,7 @@ $nome=$_SESSION['nome'];
 $azienda=$_SESSION['azienda'];
 $ruolo = strtoupper($_SESSION['ruolo']);
 if($ruolo == "AMMINISTRATORE"){
-    header("Location: homeAmministratore.php?az=$azienda");
+    header("Location: homeAmministratore.php");
 }else{
     if($ruolo == "OPERATORE"){
         header("Location: homeOperatore.php?az=$azienda");

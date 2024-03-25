@@ -15,36 +15,31 @@
             </tr>
             <?php
                 session_start(); 
-                $connesione= new mysqli('localhost','root','','MaintHelp'); 
-                if($connesione->connect_error){
-                    echo("Connection failed: " . $connesione->connect_error);
-                    exit();
-                }else{
-                    $admin_id = $_SESSION['id'];
-                    $azienda=$_GET['az'];
-                    $query="select * from UTENTE WHERE ID != '$admin_id' AND AZIENDA_ID = '$azienda'";
-                    $result=$connesione->query($query);
-                    while($row=$result->fetch_assoc()){
-                        echo "<tr>";
-                        echo "<td>".$row['ID']."</td>";
-                        echo "<td>".$row['NOME']."</td>";
-                        echo "<td>".$row['COGNOME']."</td>";
-                        echo "<td>".$row['USERNAME']."</td>";
-                        echo "<td>".$row['RUOLO']."</td>";
-                        echo "<td>";
-                        echo "<form method='POST' action='eliminacontroller.php'>";
-                        echo "<input type='hidden' name='id_utente' value='".$row['ID']."'>";
-                        echo "<button type='submit'>Elimina</button>";
-                        echo "</form>";
-                        echo "</td>";
-                        echo "<td>";
-                        echo "<form method='POST' action='modifica.php'>";
-                        echo "<input type='hidden' name='id_utente' value='".$row['ID']."'>";
-                        echo "<button type='submit'>Modifica</button>";
-                        echo "</form>";
-                        echo "</td>";
-                        echo "</tr>";
-                    }
+                include "connessione.php";
+                $admin_id = $_SESSION['id'];
+                $azienda=$_POST['azienda'];
+                $query="select * from UTENTE WHERE ID != '$admin_id' AND AZIENDA_ID = '$azienda'";
+                $result=$connessione->query($query);
+                while($row=$result->fetch_assoc()){
+                    echo "<tr>";
+                    echo "<td>".$row['ID']."</td>";
+                    echo "<td>".$row['NOME']."</td>";
+                    echo "<td>".$row['COGNOME']."</td>";
+                    echo "<td>".$row['USERNAME']."</td>";
+                    echo "<td>".$row['RUOLO']."</td>";
+                    echo "<td>";
+                    echo "<form method='POST' action='eliminacontroller.php'>";
+                    echo "<input type='hidden' name='id_utente' value='".$row['ID']."'>";
+                    echo "<button type='submit'>Elimina</button>";
+                    echo "</form>";
+                    echo "</td>";
+                    echo "<td>";
+                    echo "<form method='POST' action='modifica.php'>";
+                    echo "<input type='hidden' name='id_utente' value='".$row['ID']."'>";
+                    echo "<button type='submit'>Modifica</button>";
+                    echo "</form>";
+                    echo "</td>";
+                    echo "</tr>";
                 }
             ?>
         </table>

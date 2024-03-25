@@ -5,8 +5,9 @@ $cognome=$_POST['cognome'];
 $ruolo = strtoupper($_POST['ruolo']);
 $username=$_POST['username'];
 $password=$_POST['password'];
-$azienda=$_GET['az'];
-
+$azienda=$_POST['azienda'];
+echo $azienda;  
+echo "sto facendo la registrazione";
 $password=MD5($password);
 
 $connesione= new mysqli('localhost','root','','MaintHelp'); 
@@ -24,6 +25,7 @@ if($connesione->connect_error){
     } else {
         try{
             $registra="insert into UTENTE (nome, cognome, ruolo, username, password, azienda_id) values ('$nome', '$cognome', '$ruolo', '$username', '$password', '$azienda')";
+            echo "QUERY [".$registra."]<br/>";
             $connesione->query($registra);
             echo "Registrazione effetuata";
             echo "<br>";

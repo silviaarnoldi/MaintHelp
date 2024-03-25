@@ -6,6 +6,9 @@
     <form action="registracontroller.php" method="post">
         <input type="text" name="nome" placeholder="nome"> <br> <br>
         <input type="text" name="cognome" placeholder="cognome"> <br> <br>
+        <?php
+           echo "<input type='text' name='azienda' value='".$_POST['azienda']."' />";
+        ?>
         <select  name="ruolo">
             <option value="Amministratore">Amministratore</option> 
             <option value="Operatore">Operatore</option>

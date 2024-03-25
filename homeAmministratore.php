@@ -17,17 +17,34 @@ if(!isset($_SESSION['ruolo'])){
 <!DOCTYPE html>
 <html lang="">
     <head>
+        <script>
+            function il_submit(opzione)
+            {
+                var form = document.getElementById("la_forma");
+                var azione="registra.php";
+                //alert(opzione)
+                if(opzione=="e")
+                    azione="elimina.php";
+                form.action = azione;
+                //alert("action impostata, eseguo submit");
+                form.submit();
+            }
+        </script>
+</head>
        
     <body>
         <center>
             <h1>Amministratore: <?php echo $nome; echo "    <a href='modificaUtente.php?ID=".$id."'><button> modifica credenziali</button></a>" ?></h1> <br>
     
-             <form action="registra.php?az=<?php echo $azienda; ?>".$az. method="post">
-            <input type="submit" value="Registra Utente"> <br>  <br>
-        </form>
-        <form action="elimina.php?az=<?php echo $azienda; ?>".$az. method="post">
-            <input type="submit" value="Elimina o Modifica Utente"> <br>  <br>
-        </form>
+             <form id="la_forma" method="post">
+                <?php
+                    echo "<input type='text' name='azienda' value='".$azienda."' />"
+                ?>
+                <input type="button" value="Registra Utente"  onclick="il_submit('r')" /> 
+                <input type="button" value="Elimina Utente"  onclick="il_submit('e')" /> 
+                <br/>
+                <br/>
+            </form>
         <a href="logout.php">Logout</a>
         </center>
     </body>

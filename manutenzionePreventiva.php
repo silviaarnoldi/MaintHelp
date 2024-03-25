@@ -1,15 +1,10 @@
 <?php
-$connesione= new mysqli('localhost','root','','MaintHelp'); 
-if($connesione->connect_error){
-    echo("Connection failed: " . $connesione->connect_error);
-    exit();
-}
-
+include "connessione.php";
 $id_macchinario = isset($_GET['ID']) ? mysqli_real_escape_string($connesione, $_GET['ID']) : null;
 //prendi manutentore 
 $id_manutentore = isset($_GET['IDMANUTENTORE']) ? mysqli_real_escape_string($connesione, $_GET['IDMANUTENTORE']) : null;
 $query = "SELECT * FROM MACCHINARIO WHERE ID = $id_macchinario";
-$result = mysqli_query($connesione, $query);
+$result = mysqli_query($connessione, $query);
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 } else {
@@ -17,7 +12,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 // Chiusura connessione
-mysqli_close($connesione);
+mysqli_close($connessione);
 ?>
 <!DOCTYPE html>
 <html lang="">
