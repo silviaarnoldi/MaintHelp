@@ -9,6 +9,7 @@ if(!isset($_SESSION['ruolo'])){
     }else{
         $nome=$_SESSION['nome'];
         $id=$_SESSION['id'];
+        $az=$_SESSION['azienda'];
         
     }
 }
@@ -33,7 +34,7 @@ if(!isset($_SESSION['ruolo'])){
                         echo("Connection failed: " . $connesione->connect_error);
                         exit();
                     }else{
-                        $query="select * from MACCHINARIO";
+                        $query="select * from MACCHINARIO where AZIENDA_ID='$az'";
                         $result=$connesione->query($query);
                         while($row=$result->fetch_assoc()){
                             echo "<tr>";

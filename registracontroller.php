@@ -5,6 +5,7 @@ $cognome=$_POST['cognome'];
 $ruolo = strtoupper($_POST['ruolo']);
 $username=$_POST['username'];
 $password=$_POST['password'];
+$azienda=$_GET['az'];
 
 $password=MD5($password);
 
@@ -22,7 +23,7 @@ if($connesione->connect_error){
         header("Location: registra.php");
     } else {
         try{
-            $registra="insert into UTENTE (nome, cognome, ruolo, username, password) values ('$nome', '$cognome', '$ruolo', '$username', '$password')";
+            $registra="insert into UTENTE (nome, cognome, ruolo, username, password, azienda_id) values ('$nome', '$cognome', '$ruolo', '$username', '$password', '$azienda')";
             $connesione->query($registra);
             echo "Registrazione effetuata";
             echo "<br>";

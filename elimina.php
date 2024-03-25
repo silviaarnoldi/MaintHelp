@@ -21,7 +21,8 @@
                     exit();
                 }else{
                     $admin_id = $_SESSION['id'];
-                    $query="select * from UTENTE WHERE ID != '$admin_id'";
+                    $azienda=$_GET['az'];
+                    $query="select * from UTENTE WHERE ID != '$admin_id' AND AZIENDA_ID = '$azienda'";
                     $result=$connesione->query($query);
                     while($row=$result->fetch_assoc()){
                         echo "<tr>";
