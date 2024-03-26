@@ -1,9 +1,5 @@
 <?php
-    $connessione= new mysqli('localhost','root','','MaintHelp'); 
-    if($connessione->connect_error){
-        echo("Connection failed: " . $connessione->connect_error);
-        exit();
-    }
+     include "connessione.php";
 
    $id_operatore=$_GET['ID']
 ?>

@@ -1,18 +1,14 @@
 <?php
+ include "connessione.php";
 session_start();
 $id=$_GET['ID'];
 $username=$_POST['username'];
 $password=$_POST['password'];
 $password=MD5($password);
 
-$connesione= new mysqli('localhost','root','','MaintHelp'); 
-if($connesione->connect_error){
-    echo("Connection failed: " . $connesione->connect_error);
-    exit();
-}else{
     // Controllo se il nome utente esiste già
     $checkUsername = "SELECT * FROM UTENTE WHERE username='$username'";
-    $result = $connesione->query($checkUsername);
+    $result = $connessione->query($checkUsername);
 
     if ($result->num_rows > 0) {
         echo "alert('Username già esistente,cambialo');";
@@ -20,7 +16,7 @@ if($connesione->connect_error){
     } else {
         try{
             $registra="UPDATE UTENTE SET USERNAME='$username', PASSWORD='$password' WHERE ID='$id'";
-            $connesione->query($registra);
+            $connessione->query($registra);
             /*echo "Modifiche effetuate";
             echo "<br>";
             echo "<a href='login.php'>login</a>";*/
@@ -30,5 +26,5 @@ if($connesione->connect_error){
             header("Location: modificaUtente.php?err=$err");
         }
     }
-}
+
 ?>
