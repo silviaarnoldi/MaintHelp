@@ -7,7 +7,7 @@
         <input type="text" name="nome" placeholder="nome"> <br> <br>
         <input type="text" name="cognome" placeholder="cognome"> <br> <br>
         <?php
-           echo "<input type='text' name='azienda' value='".$_POST['azienda']."' />";
+           echo "<input type='hidden' name='azienda' value='".$_POST['azienda']."' />";
         ?>
         <select  name="ruolo">
             <option value="Amministratore">Amministratore</option> 

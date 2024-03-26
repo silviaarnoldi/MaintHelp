@@ -38,7 +38,7 @@ if(!isset($_SESSION['ruolo'])){
     
              <form id="la_forma" method="post">
                 <?php
-                    echo "<input type='text' name='azienda' value='".$azienda."' />"
+                    echo "<input type='hidden' name='azienda' value='".$azienda."' />"
                 ?>
                 <input type="button" value="Registra Utente"  onclick="il_submit('r')" /> 
                 <input type="button" value="Elimina Utente"  onclick="il_submit('e')" /> 
