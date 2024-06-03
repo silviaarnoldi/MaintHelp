@@ -39,7 +39,9 @@ p {
 /* Stile per gli input di tipo text e password */
 input[type="text"],
 input[type="password"],
-input[type="date"] {
+input[type="date"],
+input[type="number"],
+textarea{
     display: inline-block;
     padding: 10px;
     border: 2px solid #d2e2fe; /* Contorno verde */
@@ -56,7 +58,9 @@ input[type="date"] {
 /* Al passaggio del mouse */
 input[type="text"]:hover,
 input[type="password"]:hover,
-input[type="date"]:hover {
+input[type="date"]:hover,
+input[type="number"]:hover ,
+textarea:hover {
     background-color: #95d4de; /* Sfondo verde */
     color: #ffffff; /* Testo bianco */
 }

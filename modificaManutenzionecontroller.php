@@ -2,30 +2,24 @@
  include "connessione.php";
 session_start();
 $id=$_GET['ID'];
-$nome=$_POST['nome'];
-$cognome=$_POST['cognome'];
-$azienda = $_POST['azienda'];
+$data = $connessione->real_escape_string($_POST['data']);
+$ore = intval($connessione->real_escape_string($_POST['ore']));
+$minuti = intval($connessione->real_escape_string($_POST['minuti']));
+$descrizione = $connessione->real_escape_string($_POST['descrizione']);
+$oretot = $ore * 60 + $minuti;
 $query_parts = array();
-    $verifica="select AZIENDA_ID from UTENTE where ID ='$id'";
-    $result=$connessione->query($verifica);
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if ($row['AZIENDA_ID'] != $azienda) {
-            $cambiato= 1;
-        }
-    }
-if (!empty($nome) || !empty($cognome) || $cambiato==1 ) {
+if (!empty($data) || !empty($ore) || !empty($minuti) || !empty($descrizione)) {
     // Preparo la query in modo dinamico includendo solo i campi non vuoti
-    if($cambiato==1){
-        $query_parts[] = "AZIENDA_ID='$azienda'";
+    if (!empty($data)) {
+        $query_parts[] = "DATA_SCRIVE='$data'";
     }
-    if (!empty($nome)) {
-        $query_parts[] = "NOME='$nome'";
+    if (!empty($ore) || !empty($minuti) ) {
+        $query_parts[] = "ORE_MANUTENZIONE='$oretot'";
     }
-    if (!empty($data_ultima)) {
-        $query_parts[] = "COGNOME='$cognome'";
+    if (!empty($descrizione)) {
+        $query_parts[] = "DESCRIZIONE='$descrizione'";
     }
-    $update_query = "UPDATE UTENTE SET " . implode(", ", $query_parts) . " WHERE ID='$id'";
+    $update_query = "UPDATE DOCUMENTO SET " . implode(", ", $query_parts) . " WHERE ID='$id'";
     
     try {
         $connessione->query($update_query);
@@ -51,7 +45,7 @@ if (!empty($nome) || !empty($cognome) || $cambiato==1 ) {
                 echo "<center>";
         echo "<h1>Modifiche effettuate</h1>";
         echo "<br>";
-        echo "<a href='profile.php class='button'>Torna alla home</a>";
+        echo "<a href='profile.php' class='button'>Torna alla home</a>";
         echo "</center>";
     } catch (Exception $e) {
         $err = $e->getMessage();

@@ -15,10 +15,13 @@ $id=$_POST['id_manutenzione'];
     <center>
     <h1>Modifica Manutenzione</h1>
     <form action="modificaManutenzionecontroller.php?ID=<?php echo $id; ?>" method="post">
-    <label for="data_prossima">Data della prossima manutenzione:</label><br>
-    <input type="date" id="data_prossima" name="data_prossima"><br><br>  
     <label for="data_stesura">Data stesura:</label><br>
-    <input type="date" id="data" name="data"><br><br>  
+    <input type="date" id="data" name="data"><br>
+    <label for="ore">Ore di manutenzione:</label><br>
+            <input type="number" id="ore" name="ore" min="0"><br>
+            <label for="minuti">Minuti di manutenzione:</label><br>
+            <input type="number" id="minuti" name="minuti" min="0" max="59"><br>
+    <label for="descrizione">Descrizione:</label><br>
     <textarea id="descrizione" name="descrizione"><?php
                  include "connessione.php";
                  $id=$_POST['id_manutenzione'];
@@ -30,8 +33,7 @@ $id=$_POST['id_manutenzione'];
                         echo "".$row_documento['DESCRIZIONE'];
                     }
                 }
-            ?></textarea><br>
-    <input type="text" name="cognome" placeholder="nuovo cognome">  <br> <br>
+            ?></textarea><br> <br>
         <input type="submit" value="Modifica">
     </form>
     <a href="profile.php">Torna alla Home</a>

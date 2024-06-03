@@ -70,6 +70,7 @@ if(!isset($_SESSION['ruolo'])){
                     <th>Id Manutentore</th>
                     <th>Id Macchinario</th>
                     <th>Elimina</th>
+                    <th>Modifica</th>
                 </tr>
                 <?php
                     $query="select * from DOCUMENTO where TIPO_MANUTENZIONE='preventiva' AND MANUTENTORE_ID='$id'";
@@ -109,6 +110,7 @@ if(!isset($_SESSION['ruolo'])){
                     <th>Id Manutentore</th>
                     <th>Id Macchinario</th>
                     <th>Elimina</th>
+                    <th>Modifica</th>
                 </tr>
                 <?php
                     $query="select * from DOCUMENTO where TIPO_MANUTENZIONE='Guasto' AND MANUTENTORE_ID='$id'";
