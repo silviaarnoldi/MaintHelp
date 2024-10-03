@@ -54,10 +54,6 @@ if(!isset($_SESSION['ruolo'])){
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <h1>Amministratore: <?php echo $nome." ".$cognome; echo "    <a href='modificaUtente.php?ID=".$id."'><button> modifica credenziali</button></a>" ?></h1> <br>
     
              <form id="la_forma" method="post">
